@@ -1,16 +1,460 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colores primarios - Cambiados a rojo estilo Tron: Ares */
+  --primary: #ff3a41;
+  --primary-light: #ff5b60;
+  --primary-dark: #cc2e33;
+  --primary-hover: #b01a1f;
+  
+  /* Colores de fondo - Oscurecidos para estilo Tron */
+  --background: #0a0a0a;
+  --background-card: #111111;
+  --background-element: #161616;
+  --background-hover: #1e1e1e;
+  
+  /* Colores de borde */
+  --border-color: #333333;
+  --border-hover: #ff3a41;
+  
+  /* Colores de texto */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-accent: #ff3a41;
+  --text-accent-hover: #ff5b60;
+  
+  /* Colores de estado */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ff3a41;
+  --info: #ff3a41;
 }
 
-@theme {
-  --font-title: "Sora", sans-serif;
-  --font-sans: "Geist", sans-serif;
-  --font-mono: "Geist Mono", monospace;
-  --color-primary: #ff5f5f;
-  --spacing-unit: 0.25rem;
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
 }
 
+/* Clases de utilidad para texto */
+.dark-text {
+  color: var(--text-primary);
+}
 
+.dark-text-muted {
+  color: var(--text-secondary);
+}
+
+/* Clases de utilidad para tarjetas */
+.dark-card {
+  background-color: var(--background-card);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 5px rgba(255, 58, 65, 0.1);
+}
+
+/* Clases de utilidad para gradientes */
+.blue-gradient-text {
+  background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Contenedor principal */
+.wrapper {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes borderAnimation {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Animación de resplandor al estilo Tron */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 58, 65, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 58, 65, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 58, 65, 0.3);
+  }
+}
+
+/* Clases de animación */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Delays para animaciones */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Efectos hover */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  box-shadow: 0 0 100px rgba(255, 58, 65, 0.4);
+  animation: glowPulse 2s infinite;
+}
+
+/* Estilos para la línea de borde animada */
+#border-path {
+  animation: borderAnimation 2s ease-in-out forwards;
+  stroke: var(--primary);
+}
+
+/* Estilos para botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 0 10px rgba(255, 58, 65, 0.5);
+}
+
+.btn-secondary {
+  background-color: var(--background-element);
+  color: var(--text-primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--background-hover);
+  box-shadow: 0 0 10px rgba(255, 58, 65, 0.3);
+}
+
+/* Estilos para etiquetas */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  background-color: rgba(255, 58, 65, 0.1);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 58, 65, 0.3);
+}
+
+/* Clases de utilidad para texto */
+.dark-text {
+  color: var(--text-primary);
+}
+
+.dark-text-muted {
+  color: var(--text-secondary);
+}
+
+/* Clases de utilidad para tarjetas */
+.dark-card {
+  background-color: var(--background-card);
+  border: 1px solid var(--border-color);
+}
+
+/* Clases de utilidad para gradientes */
+.blue-gradient-text {
+  background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Contenedor principal */
+.wrapper {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes borderAnimation {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Clases de animación */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Delays para animaciones */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Efectos hover */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Estilos para la línea de borde animada */
+#border-path {
+  animation: borderAnimation 2s ease-in-out forwards;
+}
+
+/* Estilos para botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--background-element);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--background-hover);
+}
+
+/* Estilos para etiquetas */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  background-color: var(--primary-dark);
+  color: var(--text-primary);
+  border-radius: 0.8rem;
+}
+
+/* Estilos para prosa en descripciones */
+.prose {
+  color: var(--text-secondary);
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-light);
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.625;
+}
+
+.prose a {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: var(--text-accent-hover);
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Estilos para el scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--background-element);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-color);
+}
+
+@keyframes fillLine {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}

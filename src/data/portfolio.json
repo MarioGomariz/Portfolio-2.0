@@ -1,0 +1,156 @@
+{
+  "personalInfo": {
+    "name": "Mario Gomariz",
+    "profession": "Front-end Developer",
+    "description": "Especializado en React y Next.js, con un enfoque en UX/UI para diseñar interfaces intuitivas y atractivas. Me gusta mantenerme al día con las nuevas tendencias y enriquecer la experiencia del usuario."
+  },
+  "socialLinks": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/mario-gomariz/",
+      "ariaLabel": "LinkedIn de Mario Gomariz",
+      "icon": "Linkedin"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/MarioGomariz",
+      "ariaLabel": "GitHub de Mario Gomariz",
+      "icon": "GitHub"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "01-sinergia",
+      "title": "SinergiaRH-Digital",
+      "summary": "Pagina web para SinergiaRH-Digital.",
+      "tags": [
+        "React",
+        "Tailwind",
+        "Express",
+        "MySQL"
+      ],
+      "image": "/images/projects/sinergia.webp",
+      "demoUrl": "https://sinergiarh-digital.com/"
+    },
+    {
+      "slug": "02-fairway",
+      "title": "Fairway Indoor Golf",
+      "summary": "Pagina web para Fairway Indoor Golf.",
+      "tags": [
+        "React",
+        "Tailwind",
+        "Express",
+        "MySQL",
+        "Stripe"
+      ],
+      "image": "/images/projects/fairway.webp",
+      "demoUrl": "https://fairwayreservations.com/"
+    },
+    {
+      "slug": "03-todo",
+      "title": "Todo List",
+      "summary": "Pagina web para Todo List.",
+      "tags": [
+        "React",
+        "Tailwind"
+      ],
+      "image": "/images/projects/todo.webp",
+      "demoUrl": "https://mariogomariz-to-do.vercel.app/",
+      "repoUrl": "https://github.com/MarioGomariz/ToDo"
+    },
+    {
+      "slug": "04-carrito",
+      "title": "Carrito de compras",
+      "summary": "Pagina web para Carrito de compras.",
+      "tags": [
+        "React",
+        "Tailwind"
+      ],
+      "image": "/images/projects/carrito.webp",
+      "demoUrl": "https://ecommerce-mariogomariz.vercel.app/"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "icon": "HtmlIcon",
+      "category": "technology"
+    },
+    {
+      "name": "CSS",
+      "icon": "CssIcon",
+      "category": "technology"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "JavaScriptIcon",
+      "category": "technology"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "TsIcon",
+      "category": "technology"
+    },
+    {
+      "name": "React",
+      "icon": "ReactIcon",
+      "category": "technology"
+    },
+    {
+      "name": "Node.js",
+      "icon": "NodeIcon",
+      "category": "technology"
+    },
+    {
+      "name": "Next.js",
+      "icon": "NextJS",
+      "category": "technology"
+    },
+    {
+      "name": "Astro",
+      "icon": "AstroIcon",
+      "category": "technology"
+    },
+    {
+      "name": "GitHub",
+      "icon": "GithubIcon",
+      "category": "tool"
+    },
+    {
+      "name": "Git",
+      "icon": "GitIcon",
+      "category": "tool"
+    },
+    {
+      "name": "Figma",
+      "icon": "FigmaIcon",
+      "category": "tool"
+    }
+  ],
+  "softSkills": [
+    {
+      "title": "Trabajo en equipo",
+      "paragraphs": [
+        ""
+      ]
+    },
+    {
+      "title": "Adaptabilidad",
+      "paragraphs": [
+        ""
+      ]
+    },
+    {
+      "title": "Aprendizaje continuo",
+      "paragraphs": [
+        ""
+      ]
+    },
+    {
+      "title": "Resolución de problemas",
+      "paragraphs": [
+        ""
+      ]
+    }
+  ]
+}
