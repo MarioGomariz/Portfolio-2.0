@@ -9,13 +9,17 @@ export async function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }
 
-export default async function ProjectPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+interface PageProps {
+  params: {
+    slug: string;
+  };
+  searchParams?: Record<string, string | string[] | undefined>;
+}
+
+export default async function ProjectPage(props: PageProps) {
+  const { slug } = props.params;
   const { projects } = portfolioData;
-  const project = projects.find((p) => p.slug === params.slug);
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) return notFound();
 

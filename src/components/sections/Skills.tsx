@@ -44,8 +44,16 @@ const getIconComponent = (iconName: string) => {
   }
 };
 
+// Definir una interfaz para el tipo Skill
+interface Skill {
+  name: string;
+  icon: string;
+  level?: number;
+  // Añade aquí otras propiedades que pueda tener skill
+}
+
 // Componente para renderizar una skill
-const SkillItem = ({ skill, index }: { skill: any, index: number }) => {
+const SkillItem = ({ skill, index }: { skill: Skill, index: number }) => {
   const IconComponent = getIconComponent(skill.icon);
   return (
     <div 
