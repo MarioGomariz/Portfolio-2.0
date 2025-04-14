@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import WorldMap from "@/components/icons/WorldMap";
 import { SocialList } from "@/components/ui/social";
 import portfolioData from "@/data/portfolio.json";
 import Image from "next/image";
