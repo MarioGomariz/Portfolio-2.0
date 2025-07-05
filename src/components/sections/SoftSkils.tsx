@@ -6,7 +6,7 @@ export default function SoftSkills() {
   
   return (
     <section id="soft-skills" className="py-20 wrapper animate-fade-in">
-      <div className="animate-slide-in mb-12">
+      <div className="flex flex-col md:flex-row justify-between items-center mb-10 animate-slide-in">
         <SectionTitle title="Habilidades blandas" />
       </div>
 
@@ -26,9 +26,9 @@ export default function SoftSkills() {
               </h3>
             </div>
             
-            <div className="pl-14">
+            <div className="">
               {skill.paragraphs.map((p, idx) => (
-                <p key={idx} className="text-sm dark-text-muted mb-3 leading-relaxed">
+                <p key={idx} className="text-sm dark-text-muted mb-3">
                   {p}
                 </p>
               ))}

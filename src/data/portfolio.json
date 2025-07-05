@@ -30,7 +30,8 @@
         "MySQL"
       ],
       "image": "/images/projects/sinergia.webp",
-      "demoUrl": "https://sinergiarh-digital.com/"
+      "demoUrl": "https://sinergiarh-digital.com/",
+      "description": "Pagina web para SinergiaRH-Digital. Desarrollada con React, Tailwind, Express y MySQL. Cuenta con un sistema de autenticación y roles, un sistema de crud para gestionar los usuarios y el contenido de la pagina. Ademas se implemento pagos en linea con mercado pago."
     },
     {
       "slug": "02-fairway",
@@ -44,7 +45,8 @@
         "Stripe"
       ],
       "image": "/images/projects/fairway.webp",
-      "demoUrl": "https://fairwayreservations.com/"
+      "demoUrl": "https://fairwayreservations.com/",
+      "description": "Pagina web para Fairway Indoor Golf. Desarrollada con React, Tailwind, Express y MySQL. Cuenta con un sistema de autenticación y reservaciones. Ademas se implemento pagos en linea con stripe."
     },
     {
       "slug": "03-todo",
@@ -56,18 +58,22 @@
       ],
       "image": "/images/projects/todo.webp",
       "demoUrl": "https://mariogomariz-to-do.vercel.app/",
-      "repoUrl": "https://github.com/MarioGomariz/ToDo"
+      "repoUrl": "https://github.com/MarioGomariz/ToDo",
+      "description": "Pagina web para Todo List. Desarrollada con React, Tailwind. Creada para practicar mis habilidades de desarrollo web y aprender el uso de localStorage y drag and drop."
     },
     {
       "slug": "04-carrito",
       "title": "Carrito de compras",
       "summary": "Pagina web para Carrito de compras.",
       "tags": [
-        "React",
-        "Tailwind"
+        "HTML",
+        "CSS",
+        "JavaScript"
       ],
       "image": "/images/projects/carrito.webp",
-      "demoUrl": "https://ecommerce-mariogomariz.vercel.app/"
+      "demoUrl": "https://ecommerce-mariogomariz.vercel.app/",
+      "repoUrl": "https://github.com/MarioGomariz/Ecommerce",
+      "description": "Pagina web para Carrito de compras. Desarrollada con HTML, CSS y JavaScript. Creada para practicar mis habilidades de desarrollo web."
     }
   ],
   "skills": [
@@ -131,25 +137,25 @@
     {
       "title": "Trabajo en equipo",
       "paragraphs": [
-        ""
+        "Me adapto a cualquier equipo, aportando ideas, energía y comunicación para lograr resultados en conjunto. Disfruto colaborar, compartir conocimientos y potenciar el trabajo grupal."
       ]
     },
     {
       "title": "Adaptabilidad",
       "paragraphs": [
-        ""
+        "Me ajusto fácilmente a nuevas tecnologías, equipos y formas de trabajo. No le temo a los cambios: los veo como oportunidades para crecer y sumar valor."
       ]
     },
     {
       "title": "Aprendizaje continuo",
       "paragraphs": [
-        ""
+        "Siempre busco aprender algo nuevo y aplicarlo en mis proyectos. Me motiva investigar, capacitarme y estar al día para aportar ideas frescas y soluciones innovadoras."
       ]
     },
     {
       "title": "Resolución de problemas",
       "paragraphs": [
-        ""
+        "Me gusta analizar los desafíos y encontrar soluciones creativas y rápidas ante cualquier obstáculo. Disfruto resolver problemas técnicos y ayudar a otros a superar los suyos."
       ]
     }
   ]

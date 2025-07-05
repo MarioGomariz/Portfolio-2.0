@@ -29,28 +29,52 @@ export default async function ProjectPage(props: PageProps) {
         <BackButton />
       </div>
 
-      <div className="relative pl-6 mb-8" style={{ borderLeft: '2px solid var(--primary)' }}>
-        <h1 className="text-4xl font-bold mb-3 animate-slide-in delay-100">{project.title}</h1>
-        <p className="dark-text-muted mb-6 animate-fade-in delay-200 max-w-2xl">{project.summary}</p>
+      <div
+        className="relative pl-6 mb-8"
+        style={{ borderLeft: "2px solid var(--primary)" }}
+      >
+        <h1 className="text-4xl font-bold mb-3 animate-slide-in delay-100">
+          {project.title}
+        </h1>
+        <p className="dark-text-muted mb-6 animate-fade-in delay-200 max-w-2xl">
+          {project.summary}
+        </p>
 
         <div className="flex flex-wrap gap-3 text-xs animate-fade-in delay-300 mb-6">
           {project.tags.map((tag, idx) => (
-            <span
-              key={idx}
-              className="tag"
-            >
+            <span key={idx} className="tag">
               {tag}
             </span>
           ))}
         </div>
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {project.description && (
+          <div className="animate-fade-in delay-500 prose prose-invert max-w-none">
+            <h2
+              className="text-2xl font-semibold mb-4"
+              style={{ color: "var(--text-accent)" }}
+            >
+              Descripción del proyecto
+            </h2>
+            <div className="dark-text-muted">
+              {typeof project.description === "string" ? (
+                <p>{project.description}</p>
+              ) : (
+                Array.isArray(project.description) &&
+                project.description.map((paragraph, i) => (
+                  <p key={i} className="mb-4">
+                    {paragraph}
+                  </p>
+                ))
+              )}
+            </div>
+          </div>
+        )}
 
-      <div className="overflow-hidden rounded-lg mb-8 dark-card max-w-2xl mx-auto">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full"
-        />
+        <div className="overflow-hidden rounded-lg mb-8 dark-card max-w-2xl mx-auto">
+          <img src={project.image} alt={project.title} className="w-full" />
+        </div>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in delay-400">
@@ -77,23 +101,6 @@ export default async function ProjectPage(props: PageProps) {
           </a>
         )}
       </div>
-
-      {project.description && (
-        <div className="animate-fade-in delay-500 prose prose-invert max-w-none">
-          <h2 className="text-2xl font-semibold mb-4" style={{ color: 'var(--text-accent)' }}>
-            Descripción del proyecto
-          </h2>
-          <div className="dark-text-muted">
-            {typeof project.description === 'string' ? (
-              <p>{project.description}</p>
-            ) : (
-              Array.isArray(project.description) && project.description.map((paragraph, i) => (
-                <p key={i} className="mb-4">{paragraph}</p>
-              ))
-            )}
-          </div>
-        </div>
-      )}
     </main>
   );
 }

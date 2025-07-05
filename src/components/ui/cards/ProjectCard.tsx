@@ -17,7 +17,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
 
         <div className="flex flex-wrap gap-2 text-xs mt-auto">
-          {project.tags.slice(0, 4).map((tag, idx) => (
+          {project.tags.slice(0, 3).map((tag, idx) => (
             <span
               key={idx}
               className="tag"
@@ -25,9 +25,9 @@ export default function ProjectCard({ project }: { project: Project }) {
               {tag}
             </span>
           ))}
-          {project.tags.length > 4 && (
+          {project.tags.length > 3 && (
             <span className="tag">
-              +{project.tags.length - 4}
+              +{project.tags.length - 3}
             </span>
           )}
         </div>

@@ -85,7 +85,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="pt-20 wrapper animate-fade-in">
-      <div className="animate-slide-in mb-12">
+      <div className="flex flex-col md:flex-row justify-between items-center mb-10 animate-slide-in">
         <SectionTitle title="Stack tecnológico" />
       </div>
       
