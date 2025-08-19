@@ -51,8 +51,8 @@ export default function ProjectsPage() {
   };
 
   return (
-    <main className="pt-20 wrapper animate-fade-in">
-      <div className="mb-10 animate-slide-in">
+    <main className="pt-20 wrapper">
+      <div className="mb-10">
         <SectionTitle title="Todos los proyectos" />
         <Link 
           href="/"
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
       </div>
 
       {/* Buscador y filtros */}
-      <div className="mb-8 animate-slide-in delay-200">
+      <div className="mb-8">
         <div className="flex flex-col md:flex-row gap-4 mb-6">
           {/* Buscador */}
           <div className="relative flex-grow">
@@ -154,17 +154,13 @@ export default function ProjectsPage() {
       {filteredProjects.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {filteredProjects.map((project, index) => (
-            <div
-              key={project.slug}
-              className="animate-scale-in"
-              style={{ animationDelay: `${(index % 3 + 1) * 100}ms` }}
-            >
+            <div key={project.slug}>
               <ProjectCard project={project} />
             </div>
           ))}
         </div>
       ) : (
-        <div className="text-center py-12 dark-card rounded-lg animate-fade-in">
+        <div className="text-center py-12 dark-card rounded-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-12 w-12 mx-auto mb-4 text-red-400"

@@ -35,9 +35,15 @@ declare module "@/data/portfolio.json" {
     paragraphs: string[];
   }
 
+  export interface Contact {
+    email: string;
+    ariaLabel: string;
+  }
+
   export interface PortfolioData {
     personalInfo: PersonalInfo;
     socialLinks: SocialLink[];
+    contact: Contact;
     projects: Project[];
     skills: Skill[];
     softSkills: SoftSkill[];

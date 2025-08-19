@@ -24,8 +24,8 @@ export default async function ProjectPage(props: PageProps) {
   if (!project) return notFound();
 
   return (
-    <main className="py-16 wrapper max-w-4xl mx-auto animate-fade-in">
-      <div className="animate-slide-in">
+    <main className="py-16 wrapper max-w-4xl mx-auto">
+      <div>
         <BackButton />
       </div>
 
@@ -33,14 +33,14 @@ export default async function ProjectPage(props: PageProps) {
         className="relative pl-6 mb-8"
         style={{ borderLeft: "2px solid var(--primary)" }}
       >
-        <h1 className="text-4xl font-bold mb-3 animate-slide-in delay-100">
+        <h1 className="text-4xl font-bold mb-3">
           {project.title}
         </h1>
-        <p className="dark-text-muted mb-6 animate-fade-in delay-200 max-w-2xl">
+        <p className="dark-text-muted mb-6 max-w-2xl">
           {project.summary}
         </p>
 
-        <div className="flex flex-wrap gap-3 text-xs animate-fade-in delay-300 mb-6">
+        <div className="flex flex-wrap gap-3 text-xs mb-6">
           {project.tags.map((tag, idx) => (
             <span key={idx} className="tag">
               {tag}
@@ -50,7 +50,7 @@ export default async function ProjectPage(props: PageProps) {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {project.description && (
-          <div className="animate-fade-in delay-500 prose prose-invert max-w-none">
+          <div className="prose prose-invert max-w-none">
             <h2
               className="text-2xl font-semibold mb-4"
               style={{ color: "var(--text-accent)" }}
@@ -77,7 +77,7 @@ export default async function ProjectPage(props: PageProps) {
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in delay-400">
+      <div className="flex flex-col sm:flex-row gap-4 mb-12">
         {project.demoUrl && (
           <a
             href={project.demoUrl}

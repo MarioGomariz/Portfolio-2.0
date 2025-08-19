@@ -6,19 +6,15 @@ export default function Projects() {
   const { projects } = portfolioData;
 
   return (
-    <section id="projects" className="pt-20 wrapper animate-fade-in">
+    <section id="projects" className="pt-20 wrapper">
 
-      <div className="flex flex-col md:flex-row justify-between items-center mb-10 animate-slide-in">
+      <div className="flex flex-col md:flex-row justify-between items-center mb-10">
         <SectionTitle title="Proyectos" />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {projects.slice(0, 3).map((project, index) => (
-          <div
-            key={index}
-            className="animate-scale-in"
-            style={{ animationDelay: `${(index + 1) * 100}ms` }}
-          >
+          <div key={index}>
             <ProjectCard project={project} />
           </div>
         ))}
@@ -26,7 +22,7 @@ export default function Projects() {
 
       <a
         href="/projects"
-        className="text-red-400 hover:text-red-300 text-sm transition-all hover:translate-x-1 animate-fade-in delay-100 mt-4 md:mt-0 flex items-center mb-8"
+        className="text-red-400 hover:text-red-300 text-sm mt-4 md:mt-0 flex items-center mb-8"
       >
         Ver todos
         <svg

@@ -30,6 +30,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/profile/profile.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/profile/profile.png" />
+        <link rel="apple-touch-icon" href="/images/profile/profile.png" />
+        <link rel="shortcut icon" href="/images/profile/profile.png" />
+      </head>
       <body
         className={`${sora.variable} ${geistSans.variable} ${geistMono.variable} antialiased dark-bg`}
       >

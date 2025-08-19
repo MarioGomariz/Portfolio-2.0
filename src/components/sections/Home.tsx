@@ -34,45 +34,34 @@ export default function Home() {
   }, []);
 
   return (
-    <section
-      id="home"
-      className="wrapper flex flex-col md:flex-row justify-between items-start pt-20 gap-8"
-    >
-      <div className="flex-1 relative">
-        <div id="anim-p" className="relative animate-fade-in">
-          <span
-            className="text-lg font-medium mb-2 block"
-            style={{ color: "var(--primary)" }}
-          >
-            {personalInfo.profession}
-          </span>
-          <h1 className="text-5xl font-bold mb-4 dark-text">
-            {personalInfo.name}
-          </h1>
+    <section id="home" className="wrapper pt-20">
+      <div className="w-full">
+        {/* Main card with background image - full width and height */}
+        <div className="w-full h-[400px] rounded-3xl bg-white relative flex flex-col overflow-hidden gap-10 justify-end p-6 dark:bg-raisin-black lg:h-[500px] lg:p-10">
+          {/* Gradient overlay */}
+          <div className="absolute bg-gradient-to-t from-black/80 to-transparent top-0 left-0 bottom-0 right-0 z-[2]" />
+          
+          {/* Background image */}
+          <Image
+            src="/images/coding.jpg"
+            alt="Coding background"
+            fill
+            className="absolute w-full h-full object-cover left-0 top-0"
+            priority
+          />
+          
+          {/* Content overlay */}
+          <div className="w-full flex flex-col z-[2] absolute left-0 bottom-0 leading-4 pb-5 pl-5 text-white">
+            <h1 className="text-5xl font-bold leading-7 mb-2">
+              {personalInfo.name}
+            </h1>
+            <span className="text-lg font-medium leading-9" style={{ color: "var(--primary)" }}>
+              {personalInfo.profession}
+            </span>
+            <SocialList />
+          </div>
         </div>
 
-        <p className="mt-6 max-w-xl dark-text-muted font-sans animate-fade-in delay-400 text-base leading-relaxed">
-          {personalInfo.description}
-        </p>
-
-        <div className="mt-8 animate-fade-in delay-500">
-          <SocialList />
-        </div>
-      </div>
-      
-      <div className="flex-shrink-0 w-full md:w-72 h-72 relative animate-fade-in delay-300 rounded-3xl overflow-hidden" 
-      style={{ boxShadow: "0 0 100px var(--primary)" }}
-      >
-        <Image
-          src="/images/profile/profile.webp"
-          alt="Foto de perfil"
-          fill
-          sizes="(max-width: 768px) 100vw, 288px"
-          style={{
-            objectFit: "cover",
-          }}
-          priority
-        />
       </div>
     </section>
   );

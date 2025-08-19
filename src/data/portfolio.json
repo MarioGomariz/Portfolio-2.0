@@ -1,7 +1,7 @@
 {
   "personalInfo": {
     "name": "Mario Gomariz",
-    "profession": "Front-end Developer",
+    "profession": "Front-End Developer",
     "description": "Especializado en React y Next.js, con un enfoque en UX/UI para diseñar interfaces intuitivas y atractivas. Me gusta mantenerme al día con las nuevas tendencias y enriquecer la experiencia del usuario."
   },
   "socialLinks": [
@@ -16,6 +16,12 @@
       "url": "https://github.com/MarioGomariz",
       "ariaLabel": "GitHub de Mario Gomariz",
       "icon": "GitHub"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:m.gomariz01@gmail.com",
+      "ariaLabel": "Enviar email a Mario Gomariz",
+      "icon": "Mail"
     }
   ],
   "projects": [
@@ -51,7 +57,7 @@
     {
       "slug": "03-todo",
       "title": "Todo List",
-      "summary": "Pagina web para Todo List.",
+      "summary": "Proyecto Todo List.",
       "tags": [
         "React",
         "Tailwind"
@@ -64,7 +70,7 @@
     {
       "slug": "04-carrito",
       "title": "Carrito de compras",
-      "summary": "Pagina web para Carrito de compras.",
+      "summary": "Proyecto Carrito de compras.",
       "tags": [
         "HTML",
         "CSS",

@@ -5,17 +5,16 @@ export default function SoftSkills() {
   const { softSkills } = portfolioData;
   
   return (
-    <section id="soft-skills" className="py-20 wrapper animate-fade-in">
-      <div className="flex flex-col md:flex-row justify-between items-center mb-10 animate-slide-in">
+    <section id="soft-skills" className="py-20 wrapper">
+      <div className="flex flex-col md:flex-row justify-between items-center mb-10">
         <SectionTitle title="Habilidades blandas" />
       </div>
 
       <div className="grid gap-8 md:grid-cols-2">
-        {softSkills.map((skill, index) => (
+        {softSkills.map((skill) => (
           <article 
             key={skill.title} 
-            className="group p-6 rounded-lg dark-card transition-all duration-300 hover:border-blue-500 animate-scale-in"
-            style={{ animationDelay: `${(index + 1) * 150}ms` }}
+            className="group p-6 rounded-lg dark-card hover:border-blue-500"
           >
             <div className="flex items-center mb-4">
               <h3 className="text-xl font-semibold transition-colors" 

@@ -1,5 +1,6 @@
 import GitHub from "@/components/icons/Github";
 import Linkedin from "@/components/icons/Linkedin";
+import Mail from "@/components/icons/Mail";
 import portfolioData from "@/data/portfolio.json";
 
 export default function SocialList() {
@@ -12,6 +13,8 @@ export default function SocialList() {
         return <Linkedin className="w-5 h-5" />;
       case "GitHub":
         return <GitHub className="w-5 h-5" />;
+      case "Mail":
+        return <Mail className="w-5 h-5" />;
       default:
         return null;
     }
@@ -29,7 +32,7 @@ export default function SocialList() {
             className="btn btn-primary"
           >
             {renderIcon(social.icon)}
-            <span>{social.name}</span>
+            <span className="hidden sm:inline">{social.name}</span>
           </a>
         </li>
       ))}
