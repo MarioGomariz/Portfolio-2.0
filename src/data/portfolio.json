@@ -80,6 +80,21 @@
       "demoUrl": "https://ecommerce-mariogomariz.vercel.app/",
       "repoUrl": "https://github.com/MarioGomariz/Ecommerce",
       "description": "Pagina web para Carrito de compras. Desarrollada con HTML, CSS y JavaScript. Creada para practicar mis habilidades de desarrollo web."
+    },
+    {
+      "slug": "05-weather-app",
+      "title": "Weather App",
+      "summary": "Aplicación del clima.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "TanStack Query"
+      ],
+      "image": "/images/projects/weather.webp",
+      "demoUrl": "https://weather-app-mario-gomariz.vercel.app",
+      "repoUrl": "https://github.com/MarioGomariz/Weather-App",
+      "description": "Aplicación de clima profesional con Arquitectura Limpia y SOLID. Incluye búsqueda optimizada con debouncing, geolocalización nativa, caché inteligente mediante TanStack Query y UI/UX avanzada con modo oscuro, skeleton loaders y manejo exhaustivo de estados de error y carga."
     }
   ],
   "skills": [
