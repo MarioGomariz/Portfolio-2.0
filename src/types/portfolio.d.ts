@@ -41,6 +41,14 @@ declare module "@/data/portfolio.json" {
     ariaLabel: string;
   }
 
+  export interface ExperienceItem {
+    company: string;
+    role: string;
+    period: string;
+    projectSlug?: string;
+    responsibilities: string[];
+  }
+
   export interface PortfolioData {
     personalInfo: PersonalInfo;
     socialLinks: SocialLink[];
@@ -48,6 +56,7 @@ declare module "@/data/portfolio.json" {
     projects: Project[];
     skills: Skill[];
     softSkills: SoftSkill[];
+    experience: ExperienceItem[];
   }
 
   const portfolioData: PortfolioData;

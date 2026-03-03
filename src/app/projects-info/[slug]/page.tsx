@@ -10,14 +10,14 @@ export async function generateStaticParams() {
 }
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
-  searchParams?: Record<string, string | string[] | undefined>;
+  }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }
 
 export default async function ProjectPage(props: PageProps) {
-  const { slug } = props.params;
+  const { slug } = await props.params;
   const { projects } = portfolioData;
   const project = projects.find((p) => p.slug === slug);
 

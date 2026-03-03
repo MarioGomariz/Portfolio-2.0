@@ -12,7 +12,7 @@ interface ExperienceItem {
 }
 
 export default function Experience() {
-  const experience: ExperienceItem[] = (portfolioData as any).experience;
+  const experience: ExperienceItem[] = portfolioData.experience;
 
   if (!experience || experience.length === 0) return null;
 
