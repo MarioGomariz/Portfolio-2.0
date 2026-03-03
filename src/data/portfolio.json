@@ -181,30 +181,7 @@
       ]
     },
     {
-      "slug": "06-weather-app",
-      "title": "Weather App",
-      "summary": "Proyecto personal: Aplicación del clima con optimizaciones de caché complejas implementando principios SOLID.",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Tailwind"
-      ],
-      "tools": [
-        "TanStack Query"
-      ],
-      "image": "/images/projects/weather.webp",
-      "demoUrl": "https://weather-app-mario-gomariz.vercel.app",
-      "repoUrl": "https://github.com/MarioGomariz/Weather-App",
-      "description": [
-        "Solución profesional para la previsión meteorológica, guiada por principios de Arquitectura Limpia y pilares SOLID. Desarrollada como proyecto personal con React y el tipado fuerte de TypeScript.",
-        "Ofrece una experiencia de usuario extremadamente robusta e integral gracias a:",
-        "• Sistema de búsqueda con Debouncing para cuidar drásticamente los saltos latentes en las peticiones de red.",
-        "• Medición y sincronización de ubicaciones directas gracias a la herramienta de Geolocalización nativa.",
-        "• Revalidación paralela y almacenaje automático inteligente gracias a la integración profunda de TanStack Query."
-      ]
-    },
-    {
-      "slug": "07-ruta-control",
+      "slug": "06-ruta-control",
       "title": "Ruta Control",
       "summary": "Proyecto Full-Stack: Sistema integral para la gestión administrativa de flotas, control de viajes y logística de transporte.",
       "tags": [
@@ -228,6 +205,29 @@
         "• Gestión centralizada de flota: administración detallada de choferes, tractores y semirremolques, monitorizando automáticamente estados, vencimientos de licencias y certificaciones (RTO, pruebas hidráulicas, etc).",
         "• Planificación y seguimiento de viajes: asignación eficiente de unidades, control de alcance (nacional/internacional) y registro cronológico de paradas con trazabilidad de odómetro.",
         "• Arquitectura backend y persistencia relacional estructuradas mediante Prisma ORM sobre PostgreSQL, respaldadas por un sistema de autenticación segura y protegida basada en roles con JWT."
+      ]
+    },
+    {
+      "slug": "07-weather-app",
+      "title": "Weather App",
+      "summary": "Proyecto personal: Aplicación del clima con optimizaciones de caché complejas implementando principios SOLID.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind"
+      ],
+      "tools": [
+        "TanStack Query"
+      ],
+      "image": "/images/projects/weather.webp",
+      "demoUrl": "https://weather-app-mario-gomariz.vercel.app",
+      "repoUrl": "https://github.com/MarioGomariz/Weather-App",
+      "description": [
+        "Solución profesional para la previsión meteorológica, guiada por principios de Arquitectura Limpia y pilares SOLID. Desarrollada como proyecto personal con React y el tipado fuerte de TypeScript.",
+        "Ofrece una experiencia de usuario extremadamente robusta e integral gracias a:",
+        "• Sistema de búsqueda con Debouncing para cuidar drásticamente los saltos latentes en las peticiones de red.",
+        "• Medición y sincronización de ubicaciones directas gracias a la herramienta de Geolocalización nativa.",
+        "• Revalidación paralela y almacenaje automático inteligente gracias a la integración profunda de TanStack Query."
       ]
     },
     {
