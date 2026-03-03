@@ -9,3 +9,4 @@ export { default as AstroIcon } from "./AstroIcon";
 export { default as MongoIcon } from "./MongoIcon";
 export { default as GitIcon } from "./GitIcon";
 export { default as FigmaIcon } from "./FigmaIcon";
+export { default as DatabaseIcon } from "./DatabaseIcon";
