@@ -204,7 +204,8 @@
         "Arquitectura escalable y robusta manejada de principio a fin con el tipado estricto de TypeScript, integrando React en el cliente y Node.js (Express) en el servidor.",
         "• Gestión centralizada de flota: administración detallada de choferes, tractores y semirremolques, monitorizando automáticamente estados, vencimientos de licencias y certificaciones (RTO, pruebas hidráulicas, etc).",
         "• Planificación y seguimiento de viajes: asignación eficiente de unidades, control de alcance (nacional/internacional) y registro cronológico de paradas con trazabilidad de odómetro.",
-        "• Arquitectura backend y persistencia relacional estructuradas mediante Prisma ORM sobre PostgreSQL, respaldadas por un sistema de autenticación segura y protegida basada en roles con JWT."
+        "• Arquitectura backend y persistencia relacional estructuradas mediante Prisma ORM sobre PostgreSQL, respaldadas por un sistema de autenticación segura y protegida basada en roles con JWT.",
+        "• Panel interactivo de estadísticas y gráficos, con filtrado dinámico por módulos (choferes, tractores, semirremolques, servicios) y funcionalidad avanzada de exportación de reportes en formato PDF."
       ]
     },
     {
