@@ -19,6 +19,7 @@ declare module "@/data/portfolio.json" {
     summary: string;
     description?: string | string[];
     tags: string[];
+    tools?: string[];
     image: string;
     demoUrl?: string;
     repoUrl?: string;

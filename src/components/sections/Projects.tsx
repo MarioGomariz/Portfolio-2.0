@@ -7,16 +7,13 @@ export default function Projects() {
 
   return (
     <section id="projects" className="pt-20 wrapper">
-
       <div className="flex flex-col md:flex-row justify-between items-center mb-10">
         <SectionTitle title="Proyectos" />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {projects.slice(0, 3).map((project, index) => (
-          <div key={index}>
-            <ProjectCard project={project} />
-          </div>
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
 

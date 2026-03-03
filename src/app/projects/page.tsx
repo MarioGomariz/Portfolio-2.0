@@ -11,36 +11,44 @@ export default function ProjectsPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] = useState(projects);
-  
-  // Extraer todas las tecnologías únicas de los proyectos
+
+  // Extraer todas las tecnologías y herramientas
   const allTags = Array.from(
-    new Set(projects.flatMap(project => project.tags))
+    new Set(projects.flatMap((project) => project.tags)),
+  ).sort();
+
+  const allTools = Array.from(
+    new Set(projects.flatMap((project) => project.tools || [])),
   ).sort();
 
   // Filtrar proyectos cuando cambia el término de búsqueda o las etiquetas seleccionadas
   useEffect(() => {
-    const filtered = projects.filter(project => {
+    const filtered = projects.filter((project) => {
       // Filtrar por término de búsqueda
-      const matchesSearch = searchTerm === "" || 
+      const matchesSearch =
+        searchTerm === "" ||
         project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         project.summary.toLowerCase().includes(searchTerm.toLowerCase());
-      
+
       // Filtrar por etiquetas seleccionadas
-      const matchesTags = selectedTags.length === 0 || 
-        selectedTags.every(tag => project.tags.includes(tag));
-      
+      const matchesTags =
+        selectedTags.length === 0 ||
+        selectedTags.every(
+          (tag) =>
+            project.tags.includes(tag) ||
+            (project.tools && project.tools.includes(tag)),
+        );
+
       return matchesSearch && matchesTags;
     });
-    
+
     setFilteredProjects(filtered);
   }, [searchTerm, selectedTags, projects]);
 
   // Manejar la selección/deselección de etiquetas
   const toggleTag = (tag: string) => {
-    setSelectedTags(prev => 
-      prev.includes(tag) 
-        ? prev.filter(t => t !== tag) 
-        : [...prev, tag]
+    setSelectedTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag],
     );
   };
 
@@ -54,7 +62,7 @@ export default function ProjectsPage() {
     <main className="pt-20 wrapper">
       <div className="mb-10">
         <SectionTitle title="Todos los proyectos" />
-        <Link 
+        <Link
           href="/"
           className="text-red-400 hover:text-red-300 text-sm transition-all hover:-translate-x-1 flex items-center mt-4"
         >
@@ -129,24 +137,70 @@ export default function ProjectsPage() {
           )}
         </div>
 
-        {/* Filtro de tecnologías */}
-        <div className="mb-6">
-          <h3 className="text-sm mb-2 dark-text-muted">Filtrar por tecnología:</h3>
-          <div className="flex flex-wrap gap-2">
-            {allTags.map((tag) => (
-              <button
-                key={tag}
-                onClick={() => toggleTag(tag)}
-                className={`px-3 py-1 rounded-full text-xs transition-all ${
-                  selectedTags.includes(tag)
-                    ? "bg-red-500 text-white"
-                    : "bg-red-500/10 text-red-400 hover:bg-red-500/20"
-                }`}
-              >
-                {tag}
-              </button>
-            ))}
+        {/* Filtro de Múltiples Ejes */}
+        <div className="mb-6 space-y-4">
+          <div>
+            <h3 className="text-sm mb-2 dark-text-muted">
+              Filtrar por tecnología:
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {allTags.map((tag) => (
+                <button
+                  key={`tag-${tag}`}
+                  onClick={() => toggleTag(tag)}
+                  className={`px-3 py-1 rounded-full text-xs transition-all ${
+                    selectedTags.includes(tag)
+                      ? "bg-red-500 text-white"
+                      : "bg-red-500/10 text-red-400 hover:bg-red-500/20"
+                  }`}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
           </div>
+
+          {allTools.length > 0 && (
+            <div>
+              <h3 className="text-sm mb-2 dark-text-muted">
+                Filtrar por herramienta:
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {allTools.map((tool) => (
+                  <button
+                    key={`tool-${tool}`}
+                    onClick={() => toggleTag(tool)}
+                    className={`px-3 py-1 rounded-full text-xs transition-all flex items-center gap-1.5 ${
+                      selectedTags.includes(tool)
+                        ? "bg-[var(--background-element)] text-white border border-[var(--border-color)]"
+                        : "bg-[var(--background-element)]/50 text-[var(--text-secondary)] border border-transparent hover:border-[var(--border-color)]"
+                    }`}
+                  >
+                    <svg
+                      className="w-3 h-3 text-[var(--text-muted)]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    {tool}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
@@ -154,9 +208,7 @@ export default function ProjectsPage() {
       {filteredProjects.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {filteredProjects.map((project) => (
-            <div key={project.slug}>
-              <ProjectCard project={project} />
-            </div>
+            <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
       ) : (
@@ -175,7 +227,9 @@ export default function ProjectsPage() {
               d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          <h3 className="text-xl font-semibold mb-2">No se encontraron proyectos</h3>
+          <h3 className="text-xl font-semibold mb-2">
+            No se encontraron proyectos
+          </h3>
           <p className="text-sm dark-text-muted">
             Intenta con otros términos de búsqueda o filtros diferentes
           </p>

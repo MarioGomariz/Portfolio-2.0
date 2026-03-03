@@ -1,4 +1,40 @@
 {
+  "experience": [
+    {
+      "company": "Software on the Road",
+      "role": "Frontend Developer",
+      "period": "Nov 2024 - Jul 2025",
+      "projectSlug": "",
+      "responsibilities": [
+        "Diseño y prototipado para optimizar la experiencia de usuario (UX).",
+        "Desarrollo de componentes UI modernos y reutilizables.",
+        "Resolución de bugs y optimización de rendimiento responsive."
+      ]
+    },
+    {
+      "company": "SinergiaRH-Digital",
+      "role": "Desarrollador Full Stack / IT Lead",
+      "period": "Sep 2023 - Marzo 2026",
+      "projectSlug": "01-sinergia",
+      "responsibilities": [
+        "Desarrollo de CMS propio para gestión de contenido en tiempo real.",
+        "Implementación de arquitectura de roles y seguridad con JWT.",
+        "Integración de pasarelas de pago (Mercado Pago) y API de LinkedIn.",
+        "Liderazgo y mentoría de desarrolladores pasantes."
+      ]
+    },
+    {
+      "company": "Fairway Indoor Golf",
+      "role": "Desarrollador Full Stack",
+      "period": "Ene 2024 - Feb 2024",
+      "projectSlug": "02-fairway",
+      "responsibilities": [
+        "Rediseño integral de la plataforma usando stack MERN.",
+        "Creación de motor de reservas en tiempo real y panel administrativo.",
+        "Integración de Stripe para pagos y sistema de facturación PDF."
+      ]
+    }
+  ],
   "personalInfo": {
     "name": "Mario Gomariz",
     "profession": "Front-End Developer",
@@ -28,73 +64,192 @@
     {
       "slug": "01-sinergia",
       "title": "SinergiaRH-Digital",
-      "summary": "Pagina web para SinergiaRH-Digital.",
+      "summary": "Trabajo freelance: Plataforma web para la gestión de recursos humanos y reclutamiento digital.",
       "tags": [
         "React",
         "Tailwind",
         "Express",
         "MySQL"
       ],
+      "tools": [],
       "image": "/images/projects/sinergia.webp",
       "demoUrl": "https://sinergiarh-digital.com/",
-      "description": "Pagina web para SinergiaRH-Digital. Desarrollada con React, Tailwind, Express y MySQL. Cuenta con un sistema de autenticación y roles, un sistema de crud para gestionar los usuarios y el contenido de la pagina. Ademas se implemento pagos en linea con mercado pago."
+      "description": [
+        "SinergiaRH-Digital es una plataforma integral desarrollada a medida para agilizar el reclutamiento de talentos y optimizar la gestión de RRHH. Este proyecto fue un trabajo freelance remunerado, cubriendo las necesidades operativas de la empresa cliente.",
+        "Desarrollada con React, Tailwind CSS, Express y MySQL, destacó por:",
+        "• Sistema de autenticación y autorización con gestión de roles y accesos seguros.",
+        "• Panel de administración (CRUD) para gestionar todos los perfiles, vacantes y contenido de la web.",
+        "• Integración completa y fluida de pagos online con MercadoPago."
+      ]
     },
     {
       "slug": "02-fairway",
       "title": "Fairway Indoor Golf",
-      "summary": "Pagina web para Fairway Indoor Golf.",
+      "summary": "Trabajo freelance: Aplicación e-commerce con sistema de reservas para un centro de golf indoor.",
       "tags": [
         "React",
         "Tailwind",
         "Express",
-        "MySQL",
+        "MySQL"
+      ],
+      "tools": [
         "Stripe"
       ],
       "image": "/images/projects/fairway.webp",
       "demoUrl": "https://fairwayreservations.com/",
-      "description": "Pagina web para Fairway Indoor Golf. Desarrollada con React, Tailwind, Express y MySQL. Cuenta con un sistema de autenticación y reservaciones. Ademas se implemento pagos en linea con stripe."
+      "description": [
+        "Fairway Indoor Golf es una aplicación web enfocada en la conversión de clientes y reservas de simuladores para un predio de golf indoor. Desarrollada como trabajo freelance remunerado.",
+        "Desarrollada con React, Tailwind CSS, Express y MySQL, integrando funciones vitales de negocio:",
+        "• Sistema de reserva de turnos en tiempo real con validación y prevención de solapamientos.",
+        "• Portal de autenticación seguro para que los clientes puedan registrarse y visualizar sus historiales.",
+        "• Integración de la API de Stripe para el procesamiento ininterrumpido y seguro de pagos con tarjeta."
+      ]
     },
     {
-      "slug": "03-todo",
+      "slug": "03-asamblea-regional",
+      "title": "Asamblea Regional",
+      "summary": "Proyecto Full-Stack: Aplicación móvil multiplataforma y API escalable para la gestión, control y acreditación en asambleas.",
+      "tags": [
+        "React Native",
+        "NestJS",
+        "PostgreSQL",
+        "TypeScript"
+      ],
+      "tools": [
+        "TypeORM",
+        "Google Cloud",
+        "Supabase"
+      ],
+      "image": "/images/projects/asamblea.webp",
+      "demoUrl": "https://play.google.com/store/apps/details?id=com.asamblearegional.app&pcampaignid=web_share",
+      "repoUrl": "",
+      "description": [
+        "Ecosistema integral compuesto por una aplicación móvil nativa y un backend robusto, diseñado a medida para agilizar el registro y optimizar la administración de asambleas regionales.",
+        "Desarrollado de principio a fin utilizando TypeScript tanto en el cliente (React Native / Expo) como en el servidor (NestJS), destacando las siguientes características:",
+        "• Interfaz móvil nativa equipada con utilidades de hardware, integrando escaneo rápido de códigos QR, generación de credenciales dinámicas y un manejo de estado ágil a través de Zustand.",
+        "• Arquitectura backend sólidamente estructurada y escalable bajo NestJS, conectada de manera eficiente a una base de datos relacional PostgreSQL operada con TypeORM.",
+        "• Seguridad y automatización mediante un sistema de inicio de sesión con JWT y Passport, sincronización con servicios de Google Cloud (Storage y Pub/Sub) para la gestión de archivos, y un motor de envío de correos (Nodemailer)."
+      ]
+    },
+    {
+      "slug": "04-chat-app",
+      "title": "Chat App",
+      "summary": "Proyecto personal: Software de chat asíncrono cross-server en tiempo real soportado con Next.js e In-Memory Storage.",
+      "tags": [
+        "Next.js",
+        "Tailwind",
+        "TypeScript",
+        "Node.js"
+      ],
+      "tools": [
+        "Colyseus",
+        "Socket.io"
+      ],
+      "image": "/images/projects/chat.webp",
+      "demoUrl": "https://chat-app-mg.vercel.app",
+      "repoUrl": "https://github.com/MarioGomariz/ChatApp",
+      "description": [
+        "Plataforma Full-Stack que suministra mensajería y persistencia en tiempo verdaderamente bidireccional. Abordada como proyecto personal para exprimir Next.js junto al motor servidor WebSocket Colyseus.",
+        "Proporciona un ecosistema ágil de comunicación cruzada y una capa visual elaborada con patrones funcionales (TailwindCSS - Glassmorphism).",
+        "• Suscripción optimizada de variables e interfaces sin bloqueos usando el gestor global de estados Zustand.",
+        "• Acopio temporal de los mensajes inyectado nativamente en el almacenamiento en memoria (In-Memory) de salas en el backend.",
+        "• Mecanismo de Silent Auth que previene inicios de sesión recurrentes, con alertas automáticas interconectadas vía Telegram."
+      ]
+    },
+    {
+      "slug": "05-todo",
       "title": "Todo List",
-      "summary": "Proyecto Todo List.",
+      "summary": "Proyecto personal: Aplicación Kanban interactiva y responsiva con persistencia local avanzada.",
       "tags": [
         "React",
         "Tailwind"
       ],
+      "tools": [
+        "LocalStorage",
+        "URLSearchParams",
+        "React Icons"
+      ],
       "image": "/images/projects/todo.webp",
       "demoUrl": "https://mariogomariz-to-do.vercel.app/",
       "repoUrl": "https://github.com/MarioGomariz/ToDo",
-      "description": "Pagina web para Todo List. Desarrollada con React, Tailwind. Creada para practicar mis habilidades de desarrollo web y aprender el uso de localStorage y drag and drop."
+      "description": [
+        "Una aplicación web de productividad inspirada en el formato Kanban. Construida con React, Vite y optimizada con TailwindCSS como un proyecto personal altamente pulido.",
+        "Entre sus funciones destacan:",
+        "• Gestión interactiva de tareas mediante estados de columna (Arrastrar/Clic).",
+        "• Persistencia de datos ultrarrápida usando LocalStorage, sin depender de un backend externo.",
+        "• Motor de exportación que permite compartir tableros y notas mediante enlaces en la URL (URLSearchParams)."
+      ]
     },
     {
-      "slug": "04-carrito",
-      "title": "Carrito de compras",
-      "summary": "Proyecto Carrito de compras.",
-      "tags": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ],
-      "image": "/images/projects/carrito.webp",
-      "demoUrl": "https://ecommerce-mariogomariz.vercel.app/",
-      "repoUrl": "https://github.com/MarioGomariz/Ecommerce",
-      "description": "Pagina web para Carrito de compras. Desarrollada con HTML, CSS y JavaScript. Creada para practicar mis habilidades de desarrollo web."
-    },
-    {
-      "slug": "05-weather-app",
+      "slug": "06-weather-app",
       "title": "Weather App",
-      "summary": "Aplicación del clima.",
+      "summary": "Proyecto personal: Aplicación del clima con optimizaciones de caché complejas implementando principios SOLID.",
       "tags": [
         "React",
         "TypeScript",
-        "TailwindCSS",
+        "Tailwind"
+      ],
+      "tools": [
         "TanStack Query"
       ],
       "image": "/images/projects/weather.webp",
       "demoUrl": "https://weather-app-mario-gomariz.vercel.app",
       "repoUrl": "https://github.com/MarioGomariz/Weather-App",
-      "description": "Aplicación de clima profesional con Arquitectura Limpia y SOLID. Incluye búsqueda optimizada con debouncing, geolocalización nativa, caché inteligente mediante TanStack Query y UI/UX avanzada con modo oscuro, skeleton loaders y manejo exhaustivo de estados de error y carga."
+      "description": [
+        "Solución profesional para la previsión meteorológica, guiada por principios de Arquitectura Limpia y pilares SOLID. Desarrollada como proyecto personal con React y el tipado fuerte de TypeScript.",
+        "Ofrece una experiencia de usuario extremadamente robusta e integral gracias a:",
+        "• Sistema de búsqueda con Debouncing para cuidar drásticamente los saltos latentes en las peticiones de red.",
+        "• Medición y sincronización de ubicaciones directas gracias a la herramienta de Geolocalización nativa.",
+        "• Revalidación paralela y almacenaje automático inteligente gracias a la integración profunda de TanStack Query."
+      ]
+    },
+    {
+      "slug": "07-ruta-control",
+      "title": "Ruta Control",
+      "summary": "Proyecto Full-Stack: Sistema integral para la gestión administrativa de flotas, control de viajes y logística de transporte.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Express"
+      ],
+      "tools": [
+        "Prisma",
+        "PostgreSQL",
+        "Zustand",
+        "Supabase"
+      ],
+      "image": "/images/projects/rutacontrol.webp",
+      "demoUrl": "https://ruta-control-landing.vercel.app",
+      "repoUrl": "https://github.com/MarioGomariz/RutaControl",
+      "description": [
+        "Plataforma Full-Stack orientada a la administración y monitorización de operaciones logísticas, diseñada a medida para optimizar los flujos de flotas y transporte vehicular.",
+        "Arquitectura escalable y robusta manejada de principio a fin con el tipado estricto de TypeScript, integrando React en el cliente y Node.js (Express) en el servidor.",
+        "• Gestión centralizada de flota: administración detallada de choferes, tractores y semirremolques, monitorizando automáticamente estados, vencimientos de licencias y certificaciones (RTO, pruebas hidráulicas, etc).",
+        "• Planificación y seguimiento de viajes: asignación eficiente de unidades, control de alcance (nacional/internacional) y registro cronológico de paradas con trazabilidad de odómetro.",
+        "• Arquitectura backend y persistencia relacional estructuradas mediante Prisma ORM sobre PostgreSQL, respaldadas por un sistema de autenticación segura y protegida basada en roles con JWT."
+      ]
+    },
+    {
+      "slug": "08-carrito",
+      "title": "Carrito de compras",
+      "summary": "Proyecto personal: Plataforma e-commerce SPA interactiva construida nativamente mediante Vanilla JS, HTML y CSS.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "tools": [],
+      "image": "/images/projects/carrito.webp",
+      "demoUrl": "https://ecommerce-mariogomariz.vercel.app/",
+      "repoUrl": "https://github.com/MarioGomariz/Ecommerce",
+      "description": [
+        "Simulador de e-commerce totalmente dinámico creado como proyecto personal para certificar mis habilidades sobre manipulaciones puras del DOM sin abstracciones externas.",
+        "Desarrollada solamente usando tecnologías nativas (HTML5, Modern CSS, Vanilla JS), logrando ventajas de rendimiento y características como:",
+        "• Catálogo dinámico con algoritmos de filtrado por categoría y búsquedas textuales evaluadas en directo.",
+        "• Gestión de un estado de carrito reactivo que calcula subtotales, eliminaciones y conteos al instante.",
+        "• Arquitectura verdaderamente responsiva maquetada desde cero con Media Queries, Flexbox y CSS Grid."
+      ]
     }
   ],
   "skills": [
