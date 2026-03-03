@@ -31,14 +31,28 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/profile/profile.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/profile/profile.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/images/profile/profile.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/images/profile/profile.png"
+        />
         <link rel="apple-touch-icon" href="/images/profile/profile.png" />
         <link rel="shortcut icon" href="/images/profile/profile.png" />
       </head>
       <body
         className={`${sora.variable} ${geistSans.variable} ${geistMono.variable} antialiased dark-bg`}
       >
+        {/* Background Gradients - Tron Red Style (Global) */}
+        <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary-dark/20 blur-[120px] -z-10 pointer-events-none" />
+        <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-primary/10 blur-[130px] -z-10 pointer-events-none" />
+
         {children}
       </body>
     </html>
