@@ -22,7 +22,9 @@ export default function Experience() {
   return (
     <section id="experience" className="pt-20 wrapper">
       <div className="flex flex-col md:flex-row justify-between items-center mb-10">
-        <SectionTitle title={language === "es" ? "Experiencia Laboral" : "Work Experience"} />
+        <SectionTitle
+          title={language === "es" ? "Experiencia Laboral" : "Work Experience"}
+        />
       </div>
 
       <div className="relative border-l-2 border-[var(--border-color)] ml-3 md:ml-4">
@@ -32,7 +34,7 @@ export default function Experience() {
             <span className="absolute -left-[35px] md:-left-[51px] flex h-5 w-5 items-center justify-center rounded-full bg-[var(--background)] border-2 border-[var(--primary)] group-hover:bg-[var(--primary)] transition-colors duration-300"></span>
 
             <div className="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
-              <h3 className="text-xl font-bold text-white group-hover:text-[var(--primary-light)] transition-colors duration-300">
+              <h3 className="text-xl font-bold text-txt-primary group-hover:text-txt-accent transition-colors duration-300">
                 {job.role}
               </h3>
               <span className="text-sm font-medium text-[var(--primary)] bg-[var(--primary)]/10 px-3 py-1 rounded-full w-fit">
@@ -89,7 +91,7 @@ export default function Experience() {
                 <div className="mt-6 pt-4 border-t border-[var(--border-color)]/50">
                   <Link
                     href={`/projects-info/${job.projectSlug}`}
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--primary-light)] hover:text-white transition-colors group/link"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-txt-accent hover:text-txt-primary transition-colors group/link"
                   >
                     <LinkIcon className="w-4 h-4 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                     Ver detalles del proyecto

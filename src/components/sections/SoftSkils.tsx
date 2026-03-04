@@ -8,7 +8,7 @@ export default function SoftSkills() {
   const { softSkills } = portfolioData;
 
   return (
-    <section id="soft-skills" className="py-20 wrapper">
+    <section id="soft-skills" className="py-20 mt-10 wrapper">
       <div className="flex flex-col md:flex-row justify-between items-center mb-10">
         <SectionTitle title={language === "es" ? "Habilidades blandas" : "Soft Skills"} />
       </div>

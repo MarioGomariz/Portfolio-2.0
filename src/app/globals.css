@@ -4,9 +4,27 @@
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
   --color-primary-dark: var(--primary-dark);
+  --color-primary-hover: var(--primary-hover);
+  --color-card: var(--background-card);
+  --color-element: var(--gackground-element);
+  --color-hover: var(--background-hover);
+  --color-border: var(--border-color);
+  --color-border-hover: var(--border-hover);
+  --color-txt-primary: var(--text-primary);
+  --color-txt-secondary: var(--text-secondary);
+  --color-txt-accent: var(--text-accent);
+  --color-txt-accent-hover: var(--text-accent-hover);
+
+  --color-nav-bg: var(--nav-bg);
+  --color-nav-border: var(--nav-border);
+  --color-nav-hover: var(--nav-hover);
+  --color-nav-divider: var(--nav-divider);
+  --color-nav-tooltip-bg: var(--nav-tooltip-bg);
+  --color-nav-tooltip-text: var(--nav-tooltip-text);
 }
 
-:root {
+:root,
+.dark {
   /* Colores primarios - Cambiados a rojo estilo Tron: Ares */
   --primary: #ff3a41;
   --primary-light: #ff5b60;
@@ -29,11 +47,51 @@
   --text-accent: #ff3a41;
   --text-accent-hover: #ff5b60;
 
+  /* Nav variables */
+  --nav-bg: rgba(0, 0, 0, 0.4);
+  --nav-border: rgba(255, 255, 255, 0.1);
+  --nav-hover: rgba(255, 255, 255, 0.05);
+  --nav-divider: #404040;
+  --nav-tooltip-bg: #171717;
+  --nav-tooltip-text: #f8fafc;
+
   /* Colores de estado */
   --success: #10b981;
   --warning: #f59e0b;
   --error: #ff3a41;
   --info: #ff3a41;
+}
+
+.light {
+  /* Colores primarios más claros / amables para el modo luz */
+  --primary: #e63946;
+  --primary-light: #ff6b76;
+  --primary-dark: #b82b36;
+  --primary-hover: #d12e3a;
+
+  /* Colores de fondo para Light Mode */
+  --background: #f8fafc;
+  --background-card: rgba(255, 255, 255, 0.85); /* Vidrio esmerilado claro */
+  --background-element: rgba(241, 245, 249, 0.9);
+  --background-hover: rgba(226, 232, 240, 1);
+
+  /* Colores de borde Light */
+  --border-color: #e2e8f0;
+  --border-hover: #cbd5e1;
+
+  /* Colores de texto oscuro para lectura fácil */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-accent: #e63946;
+  --text-accent-hover: #d12e3a;
+
+  /* Nav variables */
+  --nav-bg: rgba(255, 255, 255, 0.6);
+  --nav-border: rgba(0, 0, 0, 0.1);
+  --nav-hover: rgba(0, 0, 0, 0.05);
+  --nav-divider: #d4d4d4;
+  --nav-tooltip-bg: #ffffff;
+  --nav-tooltip-text: #0f172a;
 }
 
 body {
@@ -52,11 +110,11 @@ body {
 
 /* Clases de utilidad para tarjetas (Glassmorphism) */
 .dark-card {
-  background-color: rgba(17, 17, 17, 0.7); /* #111111 con 70% opacidad */
+  background-color: var(--background-card);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05); /* Borde sutil */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Sombra suave */
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 /* Clases de utilidad para gradientes */
@@ -128,8 +186,8 @@ body {
   padding: 0.25rem 0.5rem;
   border-radius: 0.8rem;
   font-size: 0.75rem;
-  background-color: var(--primary-dark);
-  color: var(--text-primary);
+  background-color: var(--primary);
+  color: #ffffff; /* Asegurar que el texto sea blanco en los tags siempre ya que el fondo es primario */
 }
 
 /* Estilos para prosa en descripciones */

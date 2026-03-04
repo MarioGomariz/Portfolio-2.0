@@ -42,7 +42,7 @@ export default function ProjectContent({ slug }: { slug: string }) {
                 className="px-3 py-1.5 rounded-full bg-[var(--background-element)] text-[var(--text-secondary)] border border-[var(--border-color)] flex items-center gap-1.5"
               >
                 <svg
-                  className="w-3.5 h-3.5 text-[var(--text-muted)]"
+                  className="w-3.5 h-3.5 text-[var(--text-secondary)]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -70,7 +70,9 @@ export default function ProjectContent({ slug }: { slug: string }) {
         {project.description && (
           <div className="flex flex-col gap-4 w-full prose-invert max-w-none">
             <h2 className="text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary)] to-[var(--primary-light)] mb-1">
-              {language === "es" ? "Descripción del proyecto" : "Project Description"}
+              {language === "es"
+                ? "Descripción del proyecto"
+                : "Project Description"}
             </h2>
             <div className="flex flex-col gap-3 text-[var(--text-secondary)]">
               {typeof project.description === "string" ? (
@@ -103,7 +105,7 @@ export default function ProjectContent({ slug }: { slug: string }) {
                             <polyline points="20 6 9 17 4 12"></polyline>
                           </svg>
                         </span>
-                        <p className="flex-1 leading-snug text-sm md:text-[0.95rem] group-hover:text-white transition-colors duration-300">
+                        <p className="flex-1 leading-snug text-sm md:text-[0.95rem] group-hover:text-txt-primary transition-colors duration-300">
                           {text}
                         </p>
                       </div>
@@ -113,7 +115,7 @@ export default function ProjectContent({ slug }: { slug: string }) {
                   return (
                     <p
                       key={i}
-                      className="leading-relaxed text-base text-gray-300"
+                      className="leading-relaxed text-base text-txt-secondary"
                     >
                       {paragraph}
                     </p>

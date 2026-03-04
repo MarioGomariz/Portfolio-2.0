@@ -22,7 +22,7 @@ export default function Projects() {
 
       <a
         href="/projects"
-        className="text-red-400 hover:text-red-300 text-sm mt-4 md:mt-0 flex items-center mb-8"
+        className="text-txt-accent hover:text-txt-accent-hover text-sm mt-4 md:mt-0 flex items-center mb-8"
       >
         {language === "es" ? "Ver todos" : "View all"}
         <svg

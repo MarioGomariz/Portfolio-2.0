@@ -13,9 +13,7 @@ export default function SectionTitle({ title, children }: Props) {
         <span className="relative inline-block">
           {title}
           {/* Línea que se anima */}
-          <span
-            className="absolute -bottom-1 left-0 h-[4px] bg-gradient-to-r from-red-500 to-red-700 [animation:fillLine_1.5s_ease-out_forwards] w-0"
-          />
+          <span className="absolute -bottom-1 left-0 h-[4px] bg-gradient-to-r from-[var(--primary)] to-[var(--primary-dark)] [animation:fillLine_1.5s_ease-out_forwards] w-0" />
         </span>
       </h2>
     </div>

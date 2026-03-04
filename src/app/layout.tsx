@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Sora } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/providers/LanguageProvider";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 import Nav from "@/components/ui/nav/Nav";
 
 const sora = Sora({
@@ -31,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <head>
         <link
           rel="icon"
@@ -51,14 +52,16 @@ export default function RootLayout({
       <body
         className={`${sora.variable} ${geistSans.variable} ${geistMono.variable} antialiased dark-bg`}
       >
-        <LanguageProvider>
-          {/* Background Gradients - Tron Red Style (Global) */}
-          <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary-dark/20 blur-[120px] -z-10 pointer-events-none" />
-          <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-primary/10 blur-[130px] -z-10 pointer-events-none" />
+        <ThemeProvider>
+          <LanguageProvider>
+            {/* Background Gradients - Tron Red Style (Global) */}
+            <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary/30 dark:bg-primary-dark/20 blur-[120px] -z-10 pointer-events-none" />
+            <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-primary/20 dark:bg-primary/10 blur-[130px] -z-10 pointer-events-none" />
 
-          {children}
-          <Nav />
-        </LanguageProvider>
+            {children}
+            <Nav />
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

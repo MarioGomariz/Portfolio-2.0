@@ -3,7 +3,7 @@ import { Project } from "@/data/portfolio.json";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group relative overflow-hidden rounded-lg dark-card transition-all duration-200 hover:border-red-500 card-hover h-full flex flex-col">
+    <article className="group relative overflow-hidden rounded-lg dark-card transition-all duration-200 hover:border-border-hover card-hover h-full flex flex-col">
       <a
         href={`/projects-info/${project.slug}`}
         className="flex flex-col p-5 flex-grow"
@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               style={{ color: "var(--primary)" }}
             />
           </div>
-          <span className="transition-colors duration-300 group-hover:text-red-400">
+          <span className="transition-colors duration-300 group-hover:text-txt-accent">
             {project.title}
           </span>
         </header>

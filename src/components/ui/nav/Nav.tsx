@@ -4,6 +4,7 @@ import { motion, useMotionValue } from "motion/react";
 import { useEffect, useState } from "react";
 import NavItem from "./NavItem";
 import { useLanguage } from "@/providers/LanguageProvider";
+import { useTheme } from "@/providers/ThemeProvider";
 
 // Define the icons directly here, or import them if available.
 // I will create simple fallback icons if the user hasn't provided specifics for the Nav.
@@ -78,6 +79,7 @@ const HomeIcon = () => (
 export default function Nav() {
   const [activeLink, setActiveLink] = useState("/#home");
   const { language, setLanguage } = useLanguage();
+  const { theme, setTheme } = useTheme();
 
   const SoftSkillsIcon = () => (
     <svg
@@ -98,6 +100,46 @@ export default function Nav() {
     </svg>
   );
 
+  const SunIcon = () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2" />
+      <path d="M12 20v2" />
+      <path d="m4.93 4.93 1.41 1.41" />
+      <path d="m17.66 17.66 1.41 1.41" />
+      <path d="M2 12h2" />
+      <path d="M20 12h2" />
+      <path d="m6.34 17.66-1.41 1.41" />
+      <path d="m19.07 4.93-1.41 1.41" />
+    </svg>
+  );
+
+  const MoonIcon = () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+    </svg>
+  );
+
   const LINKS = [
     {
       name: language === "es" ? "Inicio" : "Home",
@@ -115,7 +157,7 @@ export default function Nav() {
       element: <ExperienceIcon />,
     },
     {
-      name: language === "es" ? "Habilidades" : "Skills",
+      name: "Stack",
       link: "/#skills",
       element: <SkillsIcon />,
     },
@@ -128,6 +170,11 @@ export default function Nav() {
       name: language === "es" ? "Idioma" : "Language",
       action: () => setLanguage(language === "es" ? "en" : "es"),
       element: <span className="font-bold text-sm uppercase">{language}</span>,
+    },
+    {
+      name: language === "es" ? "Tema" : "Theme",
+      action: () => setTheme(theme === "dark" ? "light" : "dark"),
+      element: theme === "dark" ? <MoonIcon /> : <SunIcon />,
     },
   ];
 
@@ -156,7 +203,7 @@ export default function Nav() {
     scrollSpy(); // Initial check
     window.addEventListener("scroll", scrollSpy);
     return () => window.removeEventListener("scroll", scrollSpy);
-  }, []);
+  }, [scrollSpy]);
 
   return (
     <motion.div
@@ -164,14 +211,14 @@ export default function Nav() {
       onMouseLeave={() => mouseX.set(Infinity)}
       className="fixed bottom-8 left-1/2 z-[99999] flex h-16 -translate-x-1/2 items-end gap-2 p-2"
     >
-      <div className="absolute inset-0 -z-10 size-full rounded-2xl md:rounded-full bg-white/10 dark:bg-black/40 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-lg" />
+      <div className="absolute inset-0 -z-10 size-full rounded-2xl md:rounded-full bg-nav-bg backdrop-blur-xl border border-nav-border shadow-lg" />
       {LINKS.map((item, i) => (
         <NavItem
           key={i}
           activeLink={activeLink}
           {...item}
           isFirst={i === 0}
-          isLast={i === LINKS.length - 1}
+          hasDivider={i === LINKS.length - 2 || i === LINKS.length - 1}
           mouseX={mouseX}
         />
       ))}

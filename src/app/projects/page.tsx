@@ -62,10 +62,12 @@ export default function ProjectsPage() {
   return (
     <main className="pt-20 wrapper">
       <div className="mb-10">
-        <SectionTitle title={language === "es" ? "Todos los proyectos" : "All Projects"} />
+        <SectionTitle
+          title={language === "es" ? "Todos los proyectos" : "All Projects"}
+        />
         <Link
           href="/"
-          className="text-red-400 hover:text-red-300 text-sm transition-all hover:-translate-x-1 flex items-center mt-4"
+          className="text-txt-accent hover:text-txt-accent-hover text-sm transition-all hover:-translate-x-1 flex items-center mt-4"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -94,12 +96,14 @@ export default function ProjectsPage() {
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder={language === "es" ? "Buscar proyectos..." : "Search projects..."}
-              className="w-full px-4 py-2 pl-10 rounded-lg dark-card focus:outline-none focus:ring-2 focus:ring-red-500 transition-all"
+              placeholder={
+                language === "es" ? "Buscar proyectos..." : "Search projects..."
+              }
+              className="w-full px-4 py-2 pl-10 rounded-lg dark-card focus:outline-none focus:ring-2 focus:ring-primary transition-all"
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-red-400"
+              className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-txt-accent"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -117,7 +121,7 @@ export default function ProjectsPage() {
           {(searchTerm || selectedTags.length > 0) && (
             <button
               onClick={clearFilters}
-              className="px-4 py-2 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500/20 transition-all flex items-center"
+              className="px-4 py-2 rounded-lg bg-primary/10 text-txt-accent hover:bg-primary/20 transition-all flex items-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +146,9 @@ export default function ProjectsPage() {
         <div className="mb-6 space-y-4">
           <div>
             <h3 className="text-sm mb-2 dark-text-muted">
-              {language === "es" ? "Filtrar por tecnología:" : "Filter by technology:"}
+              {language === "es"
+                ? "Filtrar por tecnología:"
+                : "Filter by technology:"}
             </h3>
             <div className="flex flex-wrap gap-2">
               {allTags.map((tag) => (
@@ -151,8 +157,8 @@ export default function ProjectsPage() {
                   onClick={() => toggleTag(tag)}
                   className={`px-3 py-1 rounded-full text-xs transition-all ${
                     selectedTags.includes(tag)
-                      ? "bg-red-500 text-white"
-                      : "bg-red-500/10 text-red-400 hover:bg-red-500/20"
+                      ? "bg-primary text-white"
+                      : "bg-primary/10 text-txt-accent hover:bg-primary/20"
                   }`}
                 >
                   {tag}
@@ -164,7 +170,9 @@ export default function ProjectsPage() {
           {allTools.length > 0 && (
             <div>
               <h3 className="text-sm mb-2 dark-text-muted">
-                {language === "es" ? "Filtrar por herramienta:" : "Filter by tool:"}
+                {language === "es"
+                  ? "Filtrar por herramienta:"
+                  : "Filter by tool:"}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {allTools.map((tool) => (
@@ -173,12 +181,12 @@ export default function ProjectsPage() {
                     onClick={() => toggleTag(tool)}
                     className={`px-3 py-1 rounded-full text-xs transition-all flex items-center gap-1.5 ${
                       selectedTags.includes(tool)
-                        ? "bg-[var(--background-element)] text-white border border-[var(--border-color)]"
+                        ? "bg-[var(--background-element)] text-[var(--text-primary)] border border-[var(--border-color)]"
                         : "bg-[var(--background-element)]/50 text-[var(--text-secondary)] border border-transparent hover:border-[var(--border-color)]"
                     }`}
                   >
                     <svg
-                      className="w-3 h-3 text-[var(--text-muted)]"
+                      className="w-3 h-3 text-[var(--text-secondary)]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -216,7 +224,7 @@ export default function ProjectsPage() {
         <div className="text-center py-12 dark-card rounded-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-12 w-12 mx-auto mb-4 text-red-400"
+            className="h-12 w-12 mx-auto mb-4 text-txt-accent"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -229,16 +237,22 @@ export default function ProjectsPage() {
             />
           </svg>
           <h3 className="text-xl font-semibold mb-2">
-            {language === "es" ? "No se encontraron proyectos" : "No projects found"}
+            {language === "es"
+              ? "No se encontraron proyectos"
+              : "No projects found"}
           </h3>
           <p className="text-sm dark-text-muted">
-            {language === "es" ? "Intenta con otros términos de búsqueda o filtros diferentes" : "Try with other search terms or different filters"}
+            {language === "es"
+              ? "Intenta con otros términos de búsqueda o filtros diferentes"
+              : "Try with other search terms or different filters"}
           </p>
           <button
             onClick={clearFilters}
-            className="mt-4 px-4 py-2 rounded-lg bg-red-500 text-white hover:bg-red-600 transition-all"
+            className="mt-4 px-4 py-2 rounded-lg bg-primary text-white hover:bg-primary-hover transition-all"
           >
-            {language === "es" ? "Mostrar todos los proyectos" : "Show all projects"}
+            {language === "es"
+              ? "Mostrar todos los proyectos"
+              : "Show all projects"}
           </button>
         </div>
       )}
