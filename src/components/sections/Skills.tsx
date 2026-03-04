@@ -1,3 +1,5 @@
+"use client";
+
 import { SectionTitle } from "@/components/ui/section";
 import {
   HtmlIcon,
@@ -12,7 +14,7 @@ import {
   FigmaIcon,
   DatabaseIcon,
 } from "@/components/icons/dev";
-import portfolioData from "@/data/portfolio.json";
+import { useLanguage } from "@/providers/LanguageProvider";
 import Github from "../icons/Github";
 
 // Función para renderizar el icono correcto según el nombre
@@ -81,12 +83,13 @@ const SkillItem = ({ skill }: { skill: Skill }) => {
 };
 
 export default function Skills() {
+  const { portfolioData, language } = useLanguage();
   const { skills } = portfolioData;
 
   return (
     <section id="skills" className="pt-20 wrapper">
       <div className="flex flex-col md:flex-row justify-between items-center mb-10">
-        <SectionTitle title="Tecnologías y Herramientas" />
+        <SectionTitle title={language === "es" ? "Tecnologías y Herramientas" : "Technologies and Tools"} />
       </div>
 
       {/* Carousel infinito de skills */}

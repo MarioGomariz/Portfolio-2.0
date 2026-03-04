@@ -1,9 +1,12 @@
+"use client";
+
 import GitHub from "@/components/icons/Github";
 import Linkedin from "@/components/icons/Linkedin";
 import Mail from "@/components/icons/Mail";
-import portfolioData from "@/data/portfolio.json";
+import { useLanguage } from "@/providers/LanguageProvider";
 
 export default function SocialList() {
+  const { portfolioData } = useLanguage();
   const { socialLinks } = portfolioData;
 
   // Función para renderizar el icono correcto según el nombre

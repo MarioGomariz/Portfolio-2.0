@@ -2,10 +2,11 @@
 
 import { useEffect } from "react";
 import { SocialList } from "@/components/ui/social";
-import portfolioData from "@/data/portfolio.json";
+import { useLanguage } from "@/providers/LanguageProvider";
 import Image from "next/image";
 
 export default function Home() {
+  const { portfolioData } = useLanguage();
   const { personalInfo } = portfolioData;
 
   useEffect(() => {

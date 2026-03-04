@@ -1,5 +1,7 @@
+"use client";
+
 import { SectionTitle } from "@/components/ui/section";
-import portfolioData from "@/data/portfolio.json";
+import { useLanguage } from "@/providers/LanguageProvider";
 import Link from "next/link";
 import LinkIcon from "@/components/icons/LinkIcon";
 
@@ -12,6 +14,7 @@ interface ExperienceItem {
 }
 
 export default function Experience() {
+  const { portfolioData, language } = useLanguage();
   const experience: ExperienceItem[] = portfolioData.experience;
 
   if (!experience || experience.length === 0) return null;
@@ -19,7 +22,7 @@ export default function Experience() {
   return (
     <section id="experience" className="pt-20 wrapper">
       <div className="flex flex-col md:flex-row justify-between items-center mb-10">
-        <SectionTitle title="Experiencia Laboral" />
+        <SectionTitle title={language === "es" ? "Experiencia Laboral" : "Work Experience"} />
       </div>
 
       <div className="relative border-l-2 border-[var(--border-color)] ml-3 md:ml-4">

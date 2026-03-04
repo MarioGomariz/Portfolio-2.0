@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { SectionTitle } from "@/components/ui/section";
 import { ProjectCard } from "@/components/ui/cards";
-import portfolioData from "@/data/portfolio.json";
+import { useLanguage } from "@/providers/LanguageProvider";
 
 export default function ProjectsPage() {
+  const { portfolioData, language } = useLanguage();
   const { projects } = portfolioData;
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -61,7 +62,7 @@ export default function ProjectsPage() {
   return (
     <main className="pt-20 wrapper">
       <div className="mb-10">
-        <SectionTitle title="Todos los proyectos" />
+        <SectionTitle title={language === "es" ? "Todos los proyectos" : "All Projects"} />
         <Link
           href="/"
           className="text-red-400 hover:text-red-300 text-sm transition-all hover:-translate-x-1 flex items-center mt-4"
@@ -80,7 +81,7 @@ export default function ProjectsPage() {
               d="M14 5l7 7m0 0l-7 7m7-7H3"
             />
           </svg>
-          Volver al inicio
+          {language === "es" ? "Volver al inicio" : "Back to Home"}
         </Link>
       </div>
 
@@ -93,7 +94,7 @@ export default function ProjectsPage() {
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Buscar proyectos..."
+              placeholder={language === "es" ? "Buscar proyectos..." : "Search projects..."}
               className="w-full px-4 py-2 pl-10 rounded-lg dark-card focus:outline-none focus:ring-2 focus:ring-red-500 transition-all"
             />
             <svg
@@ -132,7 +133,7 @@ export default function ProjectsPage() {
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
-              Limpiar filtros
+              {language === "es" ? "Limpiar filtros" : "Clear filters"}
             </button>
           )}
         </div>
@@ -141,7 +142,7 @@ export default function ProjectsPage() {
         <div className="mb-6 space-y-4">
           <div>
             <h3 className="text-sm mb-2 dark-text-muted">
-              Filtrar por tecnología:
+              {language === "es" ? "Filtrar por tecnología:" : "Filter by technology:"}
             </h3>
             <div className="flex flex-wrap gap-2">
               {allTags.map((tag) => (
@@ -163,7 +164,7 @@ export default function ProjectsPage() {
           {allTools.length > 0 && (
             <div>
               <h3 className="text-sm mb-2 dark-text-muted">
-                Filtrar por herramienta:
+                {language === "es" ? "Filtrar por herramienta:" : "Filter by tool:"}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {allTools.map((tool) => (
@@ -228,16 +229,16 @@ export default function ProjectsPage() {
             />
           </svg>
           <h3 className="text-xl font-semibold mb-2">
-            No se encontraron proyectos
+            {language === "es" ? "No se encontraron proyectos" : "No projects found"}
           </h3>
           <p className="text-sm dark-text-muted">
-            Intenta con otros términos de búsqueda o filtros diferentes
+            {language === "es" ? "Intenta con otros términos de búsqueda o filtros diferentes" : "Try with other search terms or different filters"}
           </p>
           <button
             onClick={clearFilters}
             className="mt-4 px-4 py-2 rounded-lg bg-red-500 text-white hover:bg-red-600 transition-all"
           >
-            Mostrar todos los proyectos
+            {language === "es" ? "Mostrar todos los proyectos" : "Show all projects"}
           </button>
         </div>
       )}

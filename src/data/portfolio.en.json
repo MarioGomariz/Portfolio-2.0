@@ -1,0 +1,304 @@
+{
+  "experience": [
+    {
+      "company": "Software on the Road",
+      "role": "Frontend Developer",
+      "period": "Nov 2024 - Jul 2025",
+      "projectSlug": "",
+      "responsibilities": [
+        "Design and prototyping to optimize User Experience (UX).",
+        "Development of modern and reusable UI components.",
+        "Bug fixing and responsive performance optimization."
+      ]
+    },
+    {
+      "company": "SinergiaRH-Digital",
+      "role": "Full Stack Developer / IT Lead",
+      "period": "Sep 2023 - Mar 2026",
+      "projectSlug": "01-sinergia",
+      "responsibilities": [
+        "Development of proprietary CMS for real-time content management.",
+        "Implementation of role and security architecture with JWT.",
+        "Integration of payment gateways (Mercado Pago) and LinkedIn API.",
+        "Leadership and mentoring of intern developers."
+      ]
+    },
+    {
+      "company": "Fairway Indoor Golf",
+      "role": "Full Stack Developer",
+      "period": "Jan 2024 - Feb 2024",
+      "projectSlug": "02-fairway",
+      "responsibilities": [
+        "Comprehensive redesign of the platform using the MERN stack.",
+        "Creation of a real-time reservation engine and administrative panel.",
+        "Stripe integration for payments and PDF billing system."
+      ]
+    }
+  ],
+  "personalInfo": {
+    "name": "Mario Gomariz",
+    "profession": "Fullstack Developer | Frontend Specialist",
+    "description": "Specialized in React and Next.js, focusing on UX/UI to design intuitive and attractive interfaces. I enjoy keeping up with new trends and enriching the user experience."
+  },
+  "socialLinks": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/mario-gomariz/",
+      "ariaLabel": "Mario Gomariz LinkedIn",
+      "icon": "Linkedin"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/MarioGomariz",
+      "ariaLabel": "Mario Gomariz GitHub",
+      "icon": "GitHub"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:m.gomariz01@gmail.com",
+      "ariaLabel": "Send email to Mario Gomariz",
+      "icon": "Mail"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "01-sinergia",
+      "title": "SinergiaRH-Digital",
+      "summary": "Freelance work: Web platform for human resources management and digital recruiting.",
+      "tags": [
+        "React",
+        "Tailwind CSS",
+        "Express",
+        "MySQL"
+      ],
+      "tools": [],
+      "image": "/images/projects/sinergia.webp",
+      "demoUrl": "https://sinergiarh-digital.com/",
+      "description": [
+        "SinergiaRH-Digital is a comprehensive platform developed to streamline talent recruitment and optimize HR management. This project was a remunerated freelance job, covering the operational needs of the client company.",
+        "Developed with React, Tailwind CSS, Express, and MySQL, highlighted by:",
+        "• Authentication and authorization system with secure role and access management.",
+        "• Administration panel (CRUD) to manage all profiles, vacancies, and web content.",
+        "• Complete and seamless integration of online payments with MercadoPago."
+      ]
+    },
+    {
+      "slug": "02-fairway",
+      "title": "Fairway Indoor Golf",
+      "summary": "Freelance work: E-commerce application with a reservation system for an indoor golf center.",
+      "tags": [
+        "React",
+        "Tailwind CSS",
+        "Express",
+        "MySQL"
+      ],
+      "tools": [
+        "Stripe"
+      ],
+      "image": "/images/projects/fairway.webp",
+      "demoUrl": "https://fairwayreservations.com/",
+      "description": [
+        "Fairway Indoor Golf is a web application focused on customer conversion and simulator reservations for an indoor golf facility. Developed as remunerated freelance work.",
+        "Developed with React, Tailwind CSS, Express, and MySQL, integrating vital business functions:",
+        "• Real-time shift booking system with validation and overlap prevention.",
+        "• Secure authentication portal for customers to register and view their histories.",
+        "• Stripe API integration for seamless and secure credit card payments processing."
+      ]
+    },
+    {
+      "slug": "03-asamblea-regional",
+      "title": "Regional Assembly",
+      "summary": "Full-Stack Project: Cross-platform mobile app and scalable API for assembly management, control, and accreditation.",
+      "tags": [
+        "React Native",
+        "NestJS",
+        "PostgreSQL",
+        "TypeScript"
+      ],
+      "tools": [
+        "TypeORM",
+        "Google Cloud",
+        "Supabase"
+      ],
+      "image": "/images/projects/asamblea.webp",
+      "demoUrl": "https://play.google.com/store/apps/details?id=com.asamblearegional.app&pcampaignid=web_share",
+      "repoUrl": "",
+      "description": [
+        "Comprehensive ecosystem composed of a native mobile app and a robust backend, custom-designed to streamline registration and optimize the administration of regional assemblies.",
+        "Developed from start to finish using TypeScript in both the client (React Native / Expo) and server (NestJS), featuring:",
+        "• Native mobile interface equipped with hardware utilities, integrating fast QR code scanning, dynamic credential generation, and agile state management via Zustand.",
+        "• Solidly structured and scalable backend architecture under NestJS, efficiently connected to a PostgreSQL relational database operated with TypeORM.",
+        "• Security and automation through a login system with JWT and Passport, synchronization with Google Cloud services (Storage and Pub/Sub) for file management, and an email delivery engine (Nodemailer)."
+      ]
+    },
+    {
+      "slug": "04-chat-app",
+      "title": "Chat App",
+      "summary": "Personal project: Real-time cross-server asynchronous chat software supported by Next.js and In-Memory Storage.",
+      "tags": [
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "Node.js"
+      ],
+      "tools": [
+        "Colyseus",
+        "Socket.io"
+      ],
+      "image": "/images/projects/chat.webp",
+      "demoUrl": "https://chat-app-mg.vercel.app",
+      "repoUrl": "https://github.com/MarioGomariz/ChatApp",
+      "description": [
+        "Full-Stack platform supplying truly bidirectional real-time messaging and persistence. Approached as a personal project to squeeze Next.js alongside the Colyseus WebSocket server engine.",
+        "Provides an agile cross-communication ecosystem and an elaborate visual layer with functional patterns (TailwindCSS - Glassmorphism).",
+        "• Optimized subscription of variables and non-blocking interfaces using the global state manager Zustand.",
+        "• Temporary caching of messages natively injected into the In-Memory storage of backend rooms.",
+        "• Silent Auth mechanism that prevents recurrent logins, with interconnected automatic alerts via Telegram."
+      ]
+    },
+    {
+      "slug": "05-todo",
+      "title": "Todo List",
+      "summary": "Personal project: Interactive and responsive Kanban application with advanced local persistence.",
+      "tags": [
+        "React",
+        "Tailwind CSS"
+      ],
+      "tools": [
+        "LocalStorage",
+        "URLSearchParams",
+        "React Icons"
+      ],
+      "image": "/images/projects/todo.webp",
+      "demoUrl": "https://mariogomariz-to-do.vercel.app/",
+      "repoUrl": "https://github.com/MarioGomariz/ToDo",
+      "description": [
+        "A productivity web app inspired by the Kanban format. Built with React, Vite, and optimized with TailwindCSS as a highly polished personal project.",
+        "Highlighted features include:",
+        "• Interactive task management through column states (Drag/Click).",
+        "• Ultra-fast data persistence using LocalStorage, without relying on an external backend.",
+        "• Export engine allowing sharing of boards and notes via URL links (URLSearchParams)."
+      ]
+    },
+    {
+      "slug": "06-ruta-control",
+      "title": "Ruta Control",
+      "summary": "Full-Stack Project: Comprehensive system for administrative fleet management, trip control, and transportation logistics.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Express",
+        "PostgreSQL"
+      ],
+      "tools": [
+        "Prisma",
+        "Zustand",
+        "Supabase"
+      ],
+      "image": "/images/projects/rutacontrol.webp",
+      "demoUrl": "https://ruta-control-landing.vercel.app",
+      "repoUrl": "https://github.com/MarioGomariz/RutaControl",
+      "description": [
+        "Full-Stack platform oriented towards the administration and monitoring of logistical operations, custom-designed to optimize fleet and transportation flows.",
+        "Scalable and robust architecture managed end-to-end with TypeScript's strict typing, integrating React on the client and Node.js (Express) on the server.",
+        "• Centralized fleet management: detailed administration of drivers, tractors, and semi-trailers, automatically monitoring statuses, license expirations, and certifications (RTO, hydraulic tests, etc.).",
+        "• Trip planning and tracking: efficient assignment of units, scope control (national/international), and chronological logging of stops with odometer traceability.",
+        "• Backend architecture and relational persistence structured via Prisma ORM over PostgreSQL, backed by a secure role-based JWT authentication system.",
+        "• Interactive statistics and charts dashboard, with dynamic filtering by modules (drivers, tractors, semi-trailers, services) and advanced PDF report export functionality."
+      ]
+    },
+    {
+      "slug": "07-weather-app",
+      "title": "Weather App",
+      "summary": "Personal project: Weather application with complex caching optimizations implementing SOLID principles.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "tools": [
+        "TanStack Query"
+      ],
+      "image": "/images/projects/weather.webp",
+      "demoUrl": "https://weather-app-mario-gomariz.vercel.app",
+      "repoUrl": "https://github.com/MarioGomariz/Weather-App",
+      "description": [
+        "Professional solution for weather forecasting, guided by Clean Architecture and SOLID pillars. Developed as a personal project with React and TypeScript's strong typing.",
+        "Provides an extremely robust and comprehensive user experience thanks to:",
+        "• Search system with Debouncing to drastically care for latent jumps in network requests.",
+        "• Direct location measurement and synchronization thanks to the native Geolocation tool.",
+        "• Parallel revalidation and smart automatic storage thanks to deep integration with TanStack Query."
+      ]
+    },
+    {
+      "slug": "08-carrito",
+      "title": "Shopping Cart",
+      "summary": "Personal project: Interactive SPA e-commerce platform built natively with Vanilla JS, HTML, and CSS.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "tools": [],
+      "image": "/images/projects/carrito.webp",
+      "demoUrl": "https://ecommerce-mariogomariz.vercel.app/",
+      "repoUrl": "https://github.com/MarioGomariz/Ecommerce",
+      "description": [
+        "Fully dynamic e-commerce simulator created as a personal project to certify my skills on pure DOM manipulations without external abstractions.",
+        "Developed using entirely native technologies (HTML5, Modern CSS, Vanilla JS), achieving performance advantages and features such as:",
+        "• Dynamic catalog with category filtering algorithms and live textural searches.",
+        "• Reactive cart state management calculating subtotals, deletions, and counts instantly.",
+        "• Truly responsive architecture molded from scratch with Media Queries, Flexbox, and CSS Grid."
+      ]
+    }
+  ],
+  "skills": [
+    { "name": "JavaScript", "icon": "JavaScriptIcon", "category": "technology" },
+    { "name": "TypeScript", "icon": "TsIcon", "category": "technology" },
+    { "name": "React", "icon": "ReactIcon", "category": "technology" },
+    { "name": "Next.js", "icon": "NextJS", "category": "technology" },
+    { "name": "React Native", "icon": "ReactIcon", "category": "technology" },
+    { "name": "Node.js", "icon": "NodeIcon", "category": "technology" },
+    { "name": "NestJS", "icon": "NodeIcon", "category": "technology" },
+    { "name": "Express", "icon": "NodeIcon", "category": "technology" },
+    { "name": "PostgreSQL", "icon": "DatabaseIcon", "category": "technology" },
+    { "name": "Astro", "icon": "AstroIcon", "category": "technology" },
+    { "name": "HTML", "icon": "HtmlIcon", "category": "technology" },
+    { "name": "CSS", "icon": "CssIcon", "category": "technology" },
+    { "name": "Tailwind CSS", "icon": "CssIcon", "category": "technology" },
+    { "name": "Zustand", "icon": "ReactIcon", "category": "technology" },
+    { "name": "Git", "icon": "GitIcon", "category": "tool" },
+    { "name": "GitHub", "icon": "GithubIcon", "category": "tool" },
+    { "name": "Figma", "icon": "FigmaIcon", "category": "tool" },
+    { "name": "Supabase", "icon": "DatabaseIcon", "category": "tool" },
+    { "name": "Prisma", "icon": "DatabaseIcon", "category": "tool" },
+    { "name": "TanStackQuery", "icon": "ReactIcon", "category": "tool" }
+  ],
+  "softSkills": [
+    {
+      "title": "Teamwork",
+      "paragraphs": [
+        "I adapt to any team, contributing ideas, energy, and communication to achieve collective results. I enjoy collaborating, sharing knowledge, and empowering group work."
+      ]
+    },
+    {
+      "title": "Adaptability",
+      "paragraphs": [
+        "I easily adjust to new technologies, teams, and ways of working. I do not fear changes: I see them as opportunities to grow and add value."
+      ]
+    },
+    {
+      "title": "Continuous Learning",
+      "paragraphs": [
+        "I am always looking to learn something new and apply it to my projects. I am motivated by investigating, training myself, and staying up to date to bring fresh ideas and innovative solutions."
+      ]
+    },
+    {
+      "title": "Problem Solving",
+      "paragraphs": [
+        "I like to analyze challenges and find creative and quick solutions to any obstacle. I enjoy solving technical problems and helping others overcome theirs."
+      ]
+    }
+  ]
+}

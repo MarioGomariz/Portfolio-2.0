@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Sora } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/providers/LanguageProvider";
+import Nav from "@/components/ui/nav/Nav";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -49,11 +51,14 @@ export default function RootLayout({
       <body
         className={`${sora.variable} ${geistSans.variable} ${geistMono.variable} antialiased dark-bg`}
       >
-        {/* Background Gradients - Tron Red Style (Global) */}
-        <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary-dark/20 blur-[120px] -z-10 pointer-events-none" />
-        <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-primary/10 blur-[130px] -z-10 pointer-events-none" />
+        <LanguageProvider>
+          {/* Background Gradients - Tron Red Style (Global) */}
+          <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary-dark/20 blur-[120px] -z-10 pointer-events-none" />
+          <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-primary/10 blur-[130px] -z-10 pointer-events-none" />
 
-        {children}
+          {children}
+          <Nav />
+        </LanguageProvider>
       </body>
     </html>
   );
