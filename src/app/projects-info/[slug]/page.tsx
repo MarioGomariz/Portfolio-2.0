@@ -1,12 +1,16 @@
 import portfolioDataEn from "@/data/portfolio.en.json";
 import portfolioDataEs from "@/data/portfolio.es.json";
-import { useLanguage } from "@/providers/LanguageProvider";
 import ProjectContent from "./ProjectContent";
 
 export async function generateStaticParams() {
-  const {language} = useLanguage();
-  const { projects } = language === "en" ? portfolioDataEn : portfolioDataEs;
-  return projects.map((project) => ({ slug: project.slug }));
+  // Combine all slugs from both languages to ensure all static pages are generated
+  const allProjects = [
+    ...portfolioDataEn.projects,
+    ...portfolioDataEs.projects,
+  ];
+  const uniqueSlugs = Array.from(new Set(allProjects.map((p) => p.slug)));
+
+  return uniqueSlugs.map((slug) => ({ slug }));
 }
 
 interface PageProps {
