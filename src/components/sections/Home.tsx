@@ -53,16 +53,29 @@ export default function Home() {
 
           {/* Content overlay */}
           <div className="w-full flex flex-col z-[2] absolute left-0 bottom-0 leading-4 pb-5 pl-5 text-txt-primary">
-            <h1 className="text-5xl font-bold leading-7 mb-2 text-white">
+            <h1
+              className="font-bold leading-tight mb-2 text-white whitespace-nowrap"
+              style={{ fontSize: "clamp(1.75rem, 7vw, 3rem)" }}
+            >
               {personalInfo.name}
             </h1>
             <span
-              className="text-lg font-medium leading-9"
+              className="text-base sm:text-lg font-medium leading-7 mt-2 sm:mt-0"
               style={{ color: "var(--primary)" }}
             >
-              {personalInfo.profession}
+              {personalInfo.profession.includes(" (") ? (
+                <>
+                  {personalInfo.profession.split(" (")[0]}
+                  <br className="sm:hidden" />
+                  {` (${personalInfo.profession.split(" (")[1]}`}
+                </>
+              ) : (
+                personalInfo.profession
+              )}
             </span>
-            <SocialList />
+            <div className="mt-3">
+              <SocialList />
+            </div>
           </div>
         </div>
       </div>
