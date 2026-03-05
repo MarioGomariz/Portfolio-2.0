@@ -2,6 +2,7 @@ import {
   Home,
   Projects,
   Experience,
+  Education,
   Skills,
   SoftSkills,
 } from "@/components/sections";
@@ -12,6 +13,7 @@ export default function Page() {
       <Home />
       <Projects />
       <Experience />
+      <Education />
       <Skills />
       <SoftSkills />
     </main>
