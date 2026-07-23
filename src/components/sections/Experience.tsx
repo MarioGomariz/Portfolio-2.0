@@ -1,9 +1,16 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SectionTitle } from "@/components/ui/section";
 import { useLanguage } from "@/providers/LanguageProvider";
 import Link from "next/link";
 import LinkIcon from "@/components/icons/LinkIcon";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 interface ExperienceItem {
   company: string;
@@ -17,6 +24,80 @@ export default function Experience() {
   const { portfolioData, language } = useLanguage();
   const experience: ExperienceItem[] = portfolioData.experience;
 
+  const containerRef = useRef<HTMLDivElement>(null);
+  const progressBarRef = useRef<HTMLDivElement>(null);
+  const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    if (!containerRef.current || !progressBarRef.current || experience.length === 0)
+      return;
+
+    const ctx = gsap.context(() => {
+      // Timeline progress line filling on scroll
+      gsap.fromTo(
+        progressBarRef.current,
+        { scaleY: 0 },
+        {
+          scaleY: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            end: "bottom 50%",
+            scrub: 0.5,
+          },
+        }
+      );
+
+      // Scroll reveal for each experience item and its timeline dot
+      itemsRef.current.forEach((item) => {
+        if (!item) return;
+
+        const dot = item.querySelector(".timeline-dot");
+
+        gsap.fromTo(
+          item,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: item,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+
+        if (dot) {
+          gsap.fromTo(
+            dot,
+            {
+              borderColor: "var(--border-color)",
+              scale: 0.8,
+            },
+            {
+              borderColor: "var(--primary)",
+              backgroundColor: "var(--primary)",
+              scale: 1.15,
+              duration: 0.4,
+              ease: "back.out(1.7)",
+              scrollTrigger: {
+                trigger: item,
+                start: "top 75%",
+                toggleActions: "play none none reverse",
+              },
+            }
+          );
+        }
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, [experience]);
+
   if (!experience || experience.length === 0) return null;
 
   return (
@@ -27,11 +108,26 @@ export default function Experience() {
         />
       </div>
 
-      <div className="relative border-l-2 border-[var(--border-color)] ml-3 md:ml-4">
+      <div ref={containerRef} className="relative ml-3 md:ml-4">
+        {/* Base line track */}
+        <div className="absolute top-0 bottom-0 -left-[1px] w-[2px] bg-[var(--border-color)]" />
+
+        {/* Dynamic filling progress line */}
+        <div
+          ref={progressBarRef}
+          className="absolute top-0 -left-[1px] w-[2px] h-full bg-[var(--primary)] origin-top scale-y-0"
+        />
+
         {experience.map((job, index) => (
-          <div key={index} className="mb-10 ml-6 md:ml-10 relative group">
+          <div
+            key={index}
+            ref={(el) => {
+              itemsRef.current[index] = el;
+            }}
+            className="mb-10 ml-6 md:ml-10 relative group"
+          >
             {/* Timeline dot */}
-            <span className="absolute -left-[35px] md:-left-[51px] flex h-5 w-5 items-center justify-center rounded-full bg-[var(--background)] border-2 border-[var(--primary)] group-hover:bg-[var(--primary)] transition-colors duration-300"></span>
+            <span className="timeline-dot absolute top-1 -left-[34px] md:-left-[50px] flex h-5 w-5 items-center justify-center rounded-full bg-[var(--background)] border-2 border-[var(--border-color)] transition-all duration-300 z-10"></span>
 
             <div className="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
               <h3 className="text-xl font-bold text-txt-primary group-hover:text-txt-accent transition-colors duration-300">
@@ -105,3 +201,4 @@ export default function Experience() {
     </section>
   );
 }
+
