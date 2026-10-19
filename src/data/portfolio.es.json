@@ -106,7 +106,32 @@
       ]
     },
     {
-      "slug": "03-asamblea-regional",
+      "slug": "03-enermac",
+      "title": "ENERMAC",
+      "summary": "Trabajo freelance: Landing corporativa de alto impacto para empresa de ingeniería eléctrica e infraestructura.",
+      "tags": [
+        "Astro",
+        "React",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
+      "tools": [
+        "GSAP",
+        "Resend"
+      ],
+      "image": "/images/projects/enermac.webp",
+      "demoUrl": "https://enermac-sas.vercel.app/",
+      "repoUrl": "",
+      "description": [
+        "Plataforma web institucional desarrollada a medida para ENERMAC, empresa especializada en obras de infraestructura eléctrica, ingeniería de potencia y montajes industriales.",
+        "Desarrollada combinando Astro y React junto con Tailwind CSS, priorizando rendimiento extremo, diseño editorial y animaciones fluidas:",
+        "• Arquitectura optimizada con Astro Islands y Server Endpoints para entrega estática ultrarrápida y componentes interactivos aislados.",
+        "• Experiencia visual de alta gama mediante microanimaciones con GSAP, scroll suave asistido por Lenis y gráficos esquemáticos dinámicos.",
+        "• Galería Bento dinámica para visualización de obras y formulario de contacto corporativo integrado vía API routes (Resend / Nodemailer)."
+      ]
+    },
+    {
+      "slug": "04-asamblea-regional",
       "title": "Asamblea Regional",
       "summary": "Proyecto Full-Stack: Aplicación móvil multiplataforma y API escalable para la gestión, control y acreditación en asambleas.",
       "tags": [
@@ -132,7 +157,7 @@
       ]
     },
     {
-      "slug": "04-chat-app",
+      "slug": "05-chat-app",
       "title": "Chat App",
       "summary": "Proyecto personal: Software de chat asíncrono cross-server en tiempo real soportado con Next.js e In-Memory Storage.",
       "tags": [
@@ -157,7 +182,7 @@
       ]
     },
     {
-      "slug": "05-todo",
+      "slug": "06-todo",
       "title": "Todo List",
       "summary": "Proyecto personal: Aplicación Kanban interactiva y responsiva con persistencia local avanzada.",
       "tags": [
@@ -181,7 +206,7 @@
       ]
     },
     {
-      "slug": "06-ruta-control",
+      "slug": "07-ruta-control",
       "title": "Ruta Control",
       "summary": "Proyecto Full-Stack: Sistema integral para la gestión administrativa de flotas, control de viajes y logística de transporte.",
       "tags": [
@@ -209,7 +234,7 @@
       ]
     },
     {
-      "slug": "07-weather-app",
+      "slug": "08-weather-app",
       "title": "Weather App",
       "summary": "Proyecto personal: Aplicación del clima con optimizaciones de caché complejas implementando principios SOLID.",
       "tags": [
@@ -232,7 +257,7 @@
       ]
     },
     {
-      "slug": "08-carrito",
+      "slug": "09-carrito",
       "title": "Carrito de compras",
       "summary": "Proyecto personal: Plataforma e-commerce SPA interactiva construida nativamente mediante Vanilla JS, HTML y CSS.",
       "tags": [

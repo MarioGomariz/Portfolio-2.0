@@ -106,9 +106,34 @@
       ]
     },
     {
-      "slug": "03-asamblea-regional",
-      "title": "Regional Assembly",
-      "summary": "Full-Stack Project: Cross-platform mobile app and scalable API for assembly management, control, and accreditation.",
+      "slug": "03-enermac",
+      "title": "ENERMAC",
+      "summary": "Freelance work: High-impact corporate landing page for an electrical engineering and infrastructure firm.",
+      "tags": [
+        "Astro",
+        "React",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
+      "tools": [
+        "GSAP",
+        "Resend"
+      ],
+      "image": "/images/projects/enermac.webp",
+      "demoUrl": "https://enermac-sas.vercel.app/",
+      "repoUrl": "",
+      "description": [
+        "Custom institutional web platform engineered for ENERMAC, a company specialized in electrical infrastructure projects, power engineering, and industrial facilities.",
+        "Built pairing Astro and React with Tailwind CSS, prioritizing peak performance, editorial design, and fluid animations:",
+        "• High-performance architecture leveraging Astro Islands and Server Endpoints for ultra-fast static delivery and isolated interactive components.",
+        "• Premium visual experience featuring micro-animations with GSAP, smooth scrolling powered by Lenis, and dynamic schematic visuals.",
+        "• Dynamic Bento gallery showcasing completed works alongside an integrated corporate contact pipeline via API routes (Resend / Nodemailer)."
+      ]
+    },
+    {
+      "slug": "04-asamblea-regional",
+      "title": "Regional Convention",
+      "summary": "Full-Stack Project: Cross-platform mobile app and scalable API for convention management, control, and accreditation.",
       "tags": [
         "React Native",
         "NestJS",
@@ -124,7 +149,7 @@
       "demoUrl": "https://play.google.com/store/apps/details?id=com.asamblearegional.app&pcampaignid=web_share",
       "repoUrl": "",
       "description": [
-        "Comprehensive ecosystem composed of a native mobile app and a robust backend, custom-designed to streamline registration and optimize the administration of regional assemblies.",
+        "Comprehensive ecosystem composed of a native mobile app and a robust backend, custom-designed to streamline registration and optimize the administration of regional conventions.",
         "Developed from start to finish using TypeScript in both the client (React Native / Expo) and server (NestJS), featuring:",
         "• Native mobile interface equipped with hardware utilities, integrating fast QR code scanning, dynamic credential generation, and agile state management via Zustand.",
         "• Solidly structured and scalable backend architecture under NestJS, efficiently connected to a PostgreSQL relational database operated with TypeORM.",
@@ -132,7 +157,7 @@
       ]
     },
     {
-      "slug": "04-chat-app",
+      "slug": "05-chat-app",
       "title": "Chat App",
       "summary": "Personal project: Real-time cross-server asynchronous chat software supported by Next.js and In-Memory Storage.",
       "tags": [
@@ -157,7 +182,7 @@
       ]
     },
     {
-      "slug": "05-todo",
+      "slug": "06-todo",
       "title": "Todo List",
       "summary": "Personal project: Interactive and responsive Kanban application with advanced local persistence.",
       "tags": [
@@ -181,7 +206,7 @@
       ]
     },
     {
-      "slug": "06-ruta-control",
+      "slug": "07-ruta-control",
       "title": "Ruta Control",
       "summary": "Full-Stack Project: Comprehensive system for administrative fleet management, trip control, and transportation logistics.",
       "tags": [
@@ -209,7 +234,7 @@
       ]
     },
     {
-      "slug": "07-weather-app",
+      "slug": "08-weather-app",
       "title": "Weather App",
       "summary": "Personal project: Weather application with complex caching optimizations implementing SOLID principles.",
       "tags": [
@@ -232,7 +257,7 @@
       ]
     },
     {
-      "slug": "08-carrito",
+      "slug": "09-carrito",
       "title": "Shopping Cart",
       "summary": "Personal project: Interactive SPA e-commerce platform built natively with Vanilla JS, HTML, and CSS.",
       "tags": [
