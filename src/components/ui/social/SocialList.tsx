@@ -43,8 +43,8 @@ export default function SocialList() {
         <a
           href={
             language === "es"
-              ? "/CV_Mario_Gomariz_es.pdf"
-              : "/CV_Mario_Gomariz_en.pdf"
+              ? "/CV_Mario_Gomariz-es.pdf"
+              : "/CV_Mario_Gomariz-en.pdf"
           }
           download
           className="btn btn-primary"
